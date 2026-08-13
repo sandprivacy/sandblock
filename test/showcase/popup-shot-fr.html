@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>SandBlock — capture popup</title>
+<link rel="stylesheet" href="../../popup/popup.css">
+<style>
+  /* Scène de présentation : le popup réel, à sa taille réelle, posé sur
+     un fond aux couleurs de la marque. Rien n'est redessiné — la feuille
+     de style du popup est celle de l'extension. */
+  html, body { width: 1280px; height: 800px; overflow: hidden; }
+  body {
+    margin: 0; padding: 0;
+    display: flex; align-items: center; justify-content: center; gap: 72px;
+    background:
+      radial-gradient(900px 500px at 18% 12%, rgba(34,211,238,.16), transparent 60%),
+      radial-gradient(800px 500px at 88% 88%, rgba(129,140,248,.16), transparent 60%),
+      linear-gradient(155deg, #0a0d16 0%, #0f1523 55%, #0a0d16 100%);
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .pitch { width: 520px; color: #e7ecf5; }
+  .pitch h1 {
+    font-size: 46px; font-weight: 800; line-height: 1.1;
+    letter-spacing: -1.2px; margin: 0 0 18px;
+  }
+  .pitch h1 em {
+    font-style: normal;
+    background: linear-gradient(90deg, #22d3ee, #818cf8);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .pitch p { font-size: 18px; line-height: 1.6; color: #97a1b6; margin: 0 0 26px; }
+  .facts { display: flex; flex-direction: column; gap: 13px; }
+  .fact { display: flex; align-items: center; gap: 13px; font-size: 15.5px; color: #cfd6e4; }
+  .fact svg { width: 21px; height: 21px; flex: none; }
+
+  /* Le popup, encadré comme dans le navigateur */
+  .frame {
+    width: 340px; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 40px 90px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.07);
+    transform: scale(1.18); transform-origin: center;
+  }
+  .frame .chrome {
+    height: 30px; background: #171d2c; display: flex; align-items: center;
+    padding: 0 12px; gap: 7px; border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; }
+  .inner { position: relative; }
+  /* Neutralise les règles plein écran de popup.css dans ce contexte */
+  .inner .stage { position: relative; padding: 16px 18px 14px; background:
+      radial-gradient(650px 320px at 50% -140px, rgba(34,211,238,.14), transparent 65%),
+      radial-gradient(500px 300px at 110% 110%, rgba(129,140,248,.10), transparent 60%),
+      linear-gradient(180deg, #0e1220, #090b12); }
+</style>
+</head>
+<body>
+
+<div class="pitch">
+  <h1>Le web, sans<br>ce qui vous <em>piste</em>.</h1>
+  <p>Un moteur de filtrage indexé par tokens : sur 127 000 filtres,
+     une poignée seulement est évaluée à chaque requête.</p>
+  <div class="facts">
+    <div class="fact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+      Latence de filtrage de 0,17 ms par requête
+    </div>
+    <div class="fact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6z"/></svg>
+      Publicités vidéo YouTube neutralisées
+    </div>
+    <div class="fact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>
+      Aucun compte, aucune donnée collectée
+    </div>
+  </div>
+</div>
+
+<div class="frame">
+  <div class="chrome">
+    <span class="dot" style="background:#ff5f57"></span>
+    <span class="dot" style="background:#febc2e"></span>
+    <span class="dot" style="background:#28c840"></span>
+  </div>
+  <div class="inner"><div class="stage">
+
+    <div class="aurora" aria-hidden="true"></div>
+
+    <header class="header">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 96 96" aria-hidden="true">
+          <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#818cf8"/>
+          </linearGradient></defs>
+          <path d="M48 4 L86 18 V46 C86 68 70 84 48 92 C26 84 10 68 10 46 V18 Z"
+                fill="none" stroke="url(#lg)" stroke-width="7" stroke-linejoin="round"/>
+          <circle cx="48" cy="48" r="17" fill="none" stroke="url(#lg)" stroke-width="7"/>
+          <line x1="36" y1="60" x2="60" y2="36" stroke="url(#lg)" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Sand<em>Block</em></span>
+      </div>
+      <span class="version">v1.0.0</span>
+    </header>
+
+    <main>
+      <section class="power-zone">
+        <button class="power">
+          <span class="power-ring" aria-hidden="true"></span>
+          <svg class="power-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M6.2 6.5a8 8 0 1 0 11.6 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <p class="power-label">Protection activée</p>
+      </section>
+
+      <section class="site-card">
+        <div class="site-row">
+          <span class="site-host">www.lemonde.fr</span>
+          <label class="switch">
+            <input type="checkbox" checked><span class="slider"></span>
+          </label>
+        </div>
+        <span class="site-hint">Protéger ce site</span>
+      </section>
+
+      <section class="stats">
+        <div class="stat">
+          <span class="stat-value">34</span>
+          <span class="stat-label">Bloqués sur cette page</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">18 402</span>
+          <span class="stat-label">Bloqués au total</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="filters-count">156 760 filtres actifs</span>
+      <div class="footer-actions">
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 3v4h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19.4 15a1.6 1.6 0 0 0 .32 1.77l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.6 1.6 0 0 0-1.77-.32 1.6 1.6 0 0 0-1 1.47V21a2 2 0 1 1-4 0v-.09a1.6 1.6 0 0 0-1-1.47 1.6 1.6 0 0 0-1.77.32l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.6 1.6 0 0 0 4.6 15a1.6 1.6 0 0 0-1.47-1H3a2 2 0 1 1 0-4h.09a1.6 1.6 0 0 0 1.47-1 1.6 1.6 0 0 0-.32-1.77l-.06-.06A2 2 0 1 1 7 4.34l.06.06a1.6 1.6 0 0 0 1.77.32H9a1.6 1.6 0 0 0 1-1.47V3a2 2 0 1 1 4 0v.09a1.6 1.6 0 0 0 1 1.47 1.6 1.6 0 0 0 1.77-.32l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.6 1.6 0 0 0-.32 1.77V9a1.6 1.6 0 0 0 1.47 1H21a2 2 0 1 1 0 4h-.09a1.6 1.6 0 0 0-1.47 1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </footer>
+
+  </div></div>
+</div>
+
+</body>
+</html>

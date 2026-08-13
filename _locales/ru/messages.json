@@ -1,0 +1,152 @@
+{
+  "extName": {
+    "message": "SandBlock — блокировщик рекламы"
+  },
+  "extDesc": {
+    "message": "Быстрый и аккуратный блокировщик рекламы и трекеров. Движок фильтрации с индексом по токенам, совместим с EasyList, без сбора данных."
+  },
+  "protection_on": {
+    "message": "Защита включена"
+  },
+  "protection_off": {
+    "message": "Защита приостановлена"
+  },
+  "site_protection": {
+    "message": "Защищать этот сайт"
+  },
+  "site_none": {
+    "message": "Нет активной страницы"
+  },
+  "blocked_page": {
+    "message": "Заблокировано на странице"
+  },
+  "blocked_total": {
+    "message": "Заблокировано всего"
+  },
+  "active_filters": {
+    "message": "активных фильтров"
+  },
+  "settings": {
+    "message": "Настройки"
+  },
+  "update_lists": {
+    "message": "Обновить списки фильтров"
+  },
+  "updating": {
+    "message": "Обновление…"
+  },
+  "updated": {
+    "message": "Обновлено"
+  },
+  "update_failed": {
+    "message": "Не удалось обновить"
+  },
+  "opt_title": {
+    "message": "Настройки SandBlock"
+  },
+  "opt_general": {
+    "message": "Основные"
+  },
+  "opt_enable": {
+    "message": "Включить блокировку"
+  },
+  "opt_enable_hint": {
+    "message": "Главный переключатель — включает или выключает всю сетевую и косметическую фильтрацию."
+  },
+  "opt_cosmetic": {
+    "message": "Общая косметическая фильтрация"
+  },
+  "opt_cosmetic_hint": {
+    "message": "Скрывает рекламные блоки по общим CSS-правилам EasyList. Отключите, если сайт отображается неправильно."
+  },
+  "opt_scriptlets": {
+    "message": "Скриптлеты (реклама YouTube)"
+  },
+  "opt_scriptlets_hint": {
+    "message": "Нейтрализует рекламу, до которой не добирается сетевая блокировка, прежде всего на YouTube. Отключите, чтобы проверить, не из-за них ли сломался сайт."
+  },
+  "opt_language": {
+    "message": "Язык интерфейса"
+  },
+  "opt_language_hint": {
+    "message": "По умолчанию SandBlock следует языку браузера, а при его отсутствии использует английский."
+  },
+  "opt_language_auto": {
+    "message": "Автоматически (браузер)"
+  },
+  "opt_debug": {
+    "message": "Диагностика"
+  },
+  "opt_debug_enable": {
+    "message": "Вести журнал"
+  },
+  "opt_debug_hint": {
+    "message": "Записывает все действия на посещаемых страницах: заблокированные запросы, внедрённый CSS, скриптлеты и их ошибки. Включите перед воспроизведением проблемы, затем скопируйте."
+  },
+  "opt_debug_copy": {
+    "message": "Скопировать журнал"
+  },
+  "opt_debug_refresh": {
+    "message": "Обновить"
+  },
+  "opt_debug_clear": {
+    "message": "Очистить"
+  },
+  "opt_debug_copied": {
+    "message": "Скопировано ✓"
+  },
+  "opt_debug_manual": {
+    "message": "Выделено — нажмите Ctrl+C"
+  },
+  "opt_debug_off": {
+    "message": "Журнал выключен. Включите его, перезагрузите проблемную страницу и вернитесь сюда."
+  },
+  "opt_debug_empty": {
+    "message": "Пока ничего не записано. Перезагрузите проблемную страницу в другой вкладке и нажмите «Обновить»."
+  },
+  "opt_lists": {
+    "message": "Списки фильтров"
+  },
+  "opt_lists_hint": {
+    "message": "Списки обновляются автоматически каждые 24 часа."
+  },
+  "opt_last_update": {
+    "message": "Последнее обновление:"
+  },
+  "opt_never": {
+    "message": "никогда"
+  },
+  "opt_rules": {
+    "message": "правил"
+  },
+  "opt_user_filters": {
+    "message": "Мои фильтры"
+  },
+  "opt_user_filters_hint": {
+    "message": "По одному фильтру в строке, синтаксис EasyList / Adblock Plus (например, ||ads.example.com^ или example.com##.banner)."
+  },
+  "opt_whitelist": {
+    "message": "Доверенные сайты"
+  },
+  "opt_whitelist_hint": {
+    "message": "По одному имени хоста в строке (например, example.com). На этих сайтах SandBlock полностью отключён."
+  },
+  "opt_save": {
+    "message": "Сохранить"
+  },
+  "opt_saved": {
+    "message": "Сохранено ✓"
+  },
+  "opt_stats": {
+    "message": "Статистика"
+  },
+  "opt_stats_total": {
+    "message": "запросов заблокировано с момента установки"
+  },
+  "opt_stats_reset": {
+    "message": "Сбросить счётчик"
+  },
+  "opt_about": {
+    "message": "SandBlock имеет открытый исходный код, не собирает данные и работает полностью на вашем устройстве."
+  }
+}

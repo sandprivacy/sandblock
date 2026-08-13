@@ -1,0 +1,152 @@
+{
+  "extName": {
+    "message": "SandBlock — advertentieblokkering"
+  },
+  "extDesc": {
+    "message": "Razendsnelle, verzorgde blokkering van advertenties en trackers. Filtermotor met token-index, EasyList-compatibel, zonder gegevensverzameling."
+  },
+  "protection_on": {
+    "message": "Bescherming actief"
+  },
+  "protection_off": {
+    "message": "Bescherming gepauzeerd"
+  },
+  "site_protection": {
+    "message": "Deze website beschermen"
+  },
+  "site_none": {
+    "message": "Geen actieve pagina"
+  },
+  "blocked_page": {
+    "message": "Geblokkeerd op deze pagina"
+  },
+  "blocked_total": {
+    "message": "Totaal geblokkeerd"
+  },
+  "active_filters": {
+    "message": "actieve filters"
+  },
+  "settings": {
+    "message": "Instellingen"
+  },
+  "update_lists": {
+    "message": "Filterlijsten bijwerken"
+  },
+  "updating": {
+    "message": "Bijwerken…"
+  },
+  "updated": {
+    "message": "Bijgewerkt"
+  },
+  "update_failed": {
+    "message": "Bijwerken mislukt"
+  },
+  "opt_title": {
+    "message": "SandBlock-instellingen"
+  },
+  "opt_general": {
+    "message": "Algemeen"
+  },
+  "opt_enable": {
+    "message": "Blokkering inschakelen"
+  },
+  "opt_enable_hint": {
+    "message": "Hoofdschakelaar — zet alle netwerk- en cosmetische filtering aan of uit."
+  },
+  "opt_cosmetic": {
+    "message": "Algemene cosmetische filtering"
+  },
+  "opt_cosmetic_hint": {
+    "message": "Verbergt advertentievakken met de algemene CSS-regels van EasyList. Schakel uit als een website er kapot uitziet."
+  },
+  "opt_scriptlets": {
+    "message": "Scriptlets (YouTube-advertenties)"
+  },
+  "opt_scriptlets_hint": {
+    "message": "Schakelt advertenties uit die netwerkblokkering niet bereikt, vooral op YouTube. Zet uit om te controleren of een kapotte website hierdoor komt."
+  },
+  "opt_language": {
+    "message": "Taal van de interface"
+  },
+  "opt_language_hint": {
+    "message": "Standaard volgt SandBlock de taal van uw browser en valt anders terug op Engels."
+  },
+  "opt_language_auto": {
+    "message": "Automatisch (browser)"
+  },
+  "opt_debug": {
+    "message": "Diagnose"
+  },
+  "opt_debug_enable": {
+    "message": "Logboek inschakelen"
+  },
+  "opt_debug_hint": {
+    "message": "Legt elke actie op bezochte pagina's vast: geblokkeerde verzoeken, geïnjecteerde CSS, scriptlets en hun fouten. Zet aan voordat u een probleem nabootst en kopieer het daarna."
+  },
+  "opt_debug_copy": {
+    "message": "Logboek kopiëren"
+  },
+  "opt_debug_refresh": {
+    "message": "Vernieuwen"
+  },
+  "opt_debug_clear": {
+    "message": "Wissen"
+  },
+  "opt_debug_copied": {
+    "message": "Gekopieerd ✓"
+  },
+  "opt_debug_manual": {
+    "message": "Geselecteerd — druk op Ctrl+C"
+  },
+  "opt_debug_off": {
+    "message": "Het logboek staat uit. Zet het aan, herlaad de problematische pagina en kom hier terug."
+  },
+  "opt_debug_empty": {
+    "message": "Nog niets vastgelegd. Herlaad de problematische pagina in een ander tabblad en klik daarna op Vernieuwen."
+  },
+  "opt_lists": {
+    "message": "Filterlijsten"
+  },
+  "opt_lists_hint": {
+    "message": "De lijsten worden elke 24 uur automatisch vernieuwd."
+  },
+  "opt_last_update": {
+    "message": "Laatste update:"
+  },
+  "opt_never": {
+    "message": "nooit"
+  },
+  "opt_rules": {
+    "message": "regels"
+  },
+  "opt_user_filters": {
+    "message": "Mijn filters"
+  },
+  "opt_user_filters_hint": {
+    "message": "Eén filter per regel, EasyList-/Adblock Plus-syntaxis (bijv. ||ads.example.com^ of example.com##.banner)."
+  },
+  "opt_whitelist": {
+    "message": "Vertrouwde websites"
+  },
+  "opt_whitelist_hint": {
+    "message": "Eén hostnaam per regel (bijv. example.com). Op deze websites is SandBlock volledig uitgeschakeld."
+  },
+  "opt_save": {
+    "message": "Opslaan"
+  },
+  "opt_saved": {
+    "message": "Opgeslagen ✓"
+  },
+  "opt_stats": {
+    "message": "Statistieken"
+  },
+  "opt_stats_total": {
+    "message": "verzoeken geblokkeerd sinds de installatie"
+  },
+  "opt_stats_reset": {
+    "message": "Teller op nul zetten"
+  },
+  "opt_about": {
+    "message": "SandBlock is opensource, verzamelt geen gegevens en draait volledig op uw apparaat."
+  }
+}

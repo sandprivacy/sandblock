@@ -1,0 +1,152 @@
+{
+  "extName": {
+    "message": "SandBlock — 广告拦截器"
+  },
+  "extDesc": {
+    "message": "快速优雅的广告与跟踪器拦截器。基于词元索引的过滤引擎，兼容 EasyList，不收集任何数据。"
+  },
+  "protection_on": {
+    "message": "保护已启用"
+  },
+  "protection_off": {
+    "message": "保护已暂停"
+  },
+  "site_protection": {
+    "message": "保护此网站"
+  },
+  "site_none": {
+    "message": "无活动页面"
+  },
+  "blocked_page": {
+    "message": "本页已拦截"
+  },
+  "blocked_total": {
+    "message": "累计已拦截"
+  },
+  "active_filters": {
+    "message": "条生效规则"
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "update_lists": {
+    "message": "更新过滤列表"
+  },
+  "updating": {
+    "message": "正在更新…"
+  },
+  "updated": {
+    "message": "已更新"
+  },
+  "update_failed": {
+    "message": "更新失败"
+  },
+  "opt_title": {
+    "message": "SandBlock 设置"
+  },
+  "opt_general": {
+    "message": "常规"
+  },
+  "opt_enable": {
+    "message": "启用拦截"
+  },
+  "opt_enable_hint": {
+    "message": "总开关 — 启用或关闭全部网络与外观过滤。"
+  },
+  "opt_cosmetic": {
+    "message": "通用外观过滤"
+  },
+  "opt_cosmetic_hint": {
+    "message": "使用 EasyList 的通用 CSS 规则隐藏广告位。若某个网站显示异常，请关闭此项。"
+  },
+  "opt_scriptlets": {
+    "message": "脚本片段（YouTube 广告）"
+  },
+  "opt_scriptlets_hint": {
+    "message": "处理网络拦截无法覆盖的广告，尤其是 YouTube 上的广告。若网站出现异常，可关闭此项以排查原因。"
+  },
+  "opt_language": {
+    "message": "界面语言"
+  },
+  "opt_language_hint": {
+    "message": "默认情况下，SandBlock 跟随浏览器语言，无对应语言时使用英语。"
+  },
+  "opt_language_auto": {
+    "message": "自动（跟随浏览器）"
+  },
+  "opt_debug": {
+    "message": "诊断"
+  },
+  "opt_debug_enable": {
+    "message": "启用日志"
+  },
+  "opt_debug_hint": {
+    "message": "记录在所访问页面上的每一项操作：被拦截的请求、注入的 CSS、脚本片段及其错误。请在复现问题前开启，之后复制日志。"
+  },
+  "opt_debug_copy": {
+    "message": "复制日志"
+  },
+  "opt_debug_refresh": {
+    "message": "刷新"
+  },
+  "opt_debug_clear": {
+    "message": "清空"
+  },
+  "opt_debug_copied": {
+    "message": "已复制 ✓"
+  },
+  "opt_debug_manual": {
+    "message": "已选中 — 请按 Ctrl+C"
+  },
+  "opt_debug_off": {
+    "message": "日志未开启。请先开启，重新加载出问题的页面，然后回到此处。"
+  },
+  "opt_debug_empty": {
+    "message": "尚未记录任何内容。请在另一个标签页中重新加载出问题的页面，然后点击“刷新”。"
+  },
+  "opt_lists": {
+    "message": "过滤列表"
+  },
+  "opt_lists_hint": {
+    "message": "列表每 24 小时自动更新一次。"
+  },
+  "opt_last_update": {
+    "message": "最近更新："
+  },
+  "opt_never": {
+    "message": "从未"
+  },
+  "opt_rules": {
+    "message": "条规则"
+  },
+  "opt_user_filters": {
+    "message": "我的规则"
+  },
+  "opt_user_filters_hint": {
+    "message": "每行一条规则，采用 EasyList / Adblock Plus 语法（例如 ||ads.example.com^ 或 example.com##.banner）。"
+  },
+  "opt_whitelist": {
+    "message": "信任的网站"
+  },
+  "opt_whitelist_hint": {
+    "message": "每行一个主机名（例如 example.com）。SandBlock 在这些网站上完全停用。"
+  },
+  "opt_save": {
+    "message": "保存"
+  },
+  "opt_saved": {
+    "message": "已保存 ✓"
+  },
+  "opt_stats": {
+    "message": "统计"
+  },
+  "opt_stats_total": {
+    "message": "自安装以来已拦截的请求"
+  },
+  "opt_stats_reset": {
+    "message": "清零计数"
+  },
+  "opt_about": {
+    "message": "SandBlock 是开源软件，不收集任何数据，完全在你的设备上运行。"
+  }
+}

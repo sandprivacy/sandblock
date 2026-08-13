@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 96 96" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#22d3ee"/>
+            <stop offset="1" stop-color="#818cf8"/>
+          </linearGradient>
+        </defs>
+        <path d="M48 4 L86 18 V46 C86 68 70 84 48 92 C26 84 10 68 10 46 V18 Z"
+              fill="none" stroke="url(#lg)" stroke-width="7" stroke-linejoin="round"/>
+        <circle cx="48" cy="48" r="17" fill="none" stroke="url(#lg)" stroke-width="7"/>
+        <line x1="36" y1="60" x2="60" y2="36" stroke="url(#lg)" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Sand<em>Block</em></span>
+    </div>
+    <span class="version" id="version"></span>
+  </header>
+
+  <main>
+    <section class="power-zone">
+      <button id="powerBtn" class="power" title="">
+        <span class="power-ring" aria-hidden="true"></span>
+        <svg class="power-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M6.2 6.5a8 8 0 1 0 11.6 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <p class="power-label" id="powerLabel" data-i18n="protection_on"></p>
+    </section>
+
+    <section class="site-card" id="siteCard">
+      <div class="site-row">
+        <span class="site-host" id="siteHost" data-i18n="site_none"></span>
+        <label class="switch">
+          <input type="checkbox" id="siteToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <span class="site-hint" data-i18n="site_protection"></span>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span class="stat-value" id="statPage">0</span>
+        <span class="stat-label" data-i18n="blocked_page"></span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="statTotal">0</span>
+        <span class="stat-label" data-i18n="blocked_total"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="filters-count" id="filtersCount"></span>
+    <div class="footer-actions">
+      <button class="icon-btn" id="updateBtn" data-i18n-title="update_lists">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 12a8 8 0 1 1-2.3-5.6M20 3v4h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="icon-btn" id="optionsBtn" data-i18n-title="settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M19.4 15a1.6 1.6 0 0 0 .32 1.77l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.6 1.6 0 0 0-1.77-.32 1.6 1.6 0 0 0-1 1.47V21a2 2 0 1 1-4 0v-.09a1.6 1.6 0 0 0-1-1.47 1.6 1.6 0 0 0-1.77.32l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.6 1.6 0 0 0 4.6 15a1.6 1.6 0 0 0-1.47-1H3a2 2 0 1 1 0-4h.09a1.6 1.6 0 0 0 1.47-1 1.6 1.6 0 0 0-.32-1.77l-.06-.06A2 2 0 1 1 7 4.34l.06.06a1.6 1.6 0 0 0 1.77.32H9a1.6 1.6 0 0 0 1-1.47V3a2 2 0 1 1 4 0v.09a1.6 1.6 0 0 0 1 1.47 1.6 1.6 0 0 0 1.77-.32l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.6 1.6 0 0 0-.32 1.77V9a1.6 1.6 0 0 0 1.47 1H21a2 2 0 1 1 0 4h-.09a1.6 1.6 0 0 0-1.47 1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <script src="../js/ui/i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

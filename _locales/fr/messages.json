@@ -1,0 +1,152 @@
+{
+  "extName": {
+    "message": "SandBlock — Bloqueur de publicités"
+  },
+  "extDesc": {
+    "message": "Bloqueur de pubs et de traqueurs ultra-rapide et élégant. Moteur de filtrage indexé par tokens, compatible EasyList, zéro collecte de données."
+  },
+  "protection_on": {
+    "message": "Protection activée"
+  },
+  "protection_off": {
+    "message": "Protection en pause"
+  },
+  "site_protection": {
+    "message": "Protéger ce site"
+  },
+  "site_none": {
+    "message": "Aucune page active"
+  },
+  "blocked_page": {
+    "message": "Bloqués sur cette page"
+  },
+  "blocked_total": {
+    "message": "Bloqués au total"
+  },
+  "active_filters": {
+    "message": "filtres actifs"
+  },
+  "settings": {
+    "message": "Réglages"
+  },
+  "update_lists": {
+    "message": "Mettre à jour les listes"
+  },
+  "updating": {
+    "message": "Mise à jour…"
+  },
+  "updated": {
+    "message": "À jour"
+  },
+  "update_failed": {
+    "message": "Échec de la mise à jour"
+  },
+  "opt_title": {
+    "message": "Réglages de SandBlock"
+  },
+  "opt_general": {
+    "message": "Général"
+  },
+  "opt_enable": {
+    "message": "Activer le blocage"
+  },
+  "opt_enable_hint": {
+    "message": "Interrupteur principal — active ou coupe tout le filtrage réseau et cosmétique."
+  },
+  "opt_cosmetic": {
+    "message": "Filtrage cosmétique générique"
+  },
+  "opt_cosmetic_hint": {
+    "message": "Masque les emplacements publicitaires via les règles CSS génériques d'EasyList. À désactiver si un site s'affiche mal."
+  },
+  "opt_scriptlets": {
+    "message": "Scriptlets (pubs YouTube)"
+  },
+  "opt_scriptlets_hint": {
+    "message": "Neutralise les publicités que le blocage réseau ne peut pas atteindre, notamment sur YouTube. Désactivez pour vérifier si un site cassé l'est à cause d'eux."
+  },
+  "opt_language": {
+    "message": "Langue de l'interface"
+  },
+  "opt_language_hint": {
+    "message": "Par défaut, SandBlock suit la langue de votre navigateur, avec l'anglais en repli."
+  },
+  "opt_language_auto": {
+    "message": "Automatique (navigateur)"
+  },
+  "opt_debug": {
+    "message": "Diagnostic"
+  },
+  "opt_debug_enable": {
+    "message": "Activer le journal"
+  },
+  "opt_debug_hint": {
+    "message": "Enregistre chaque intervention sur les pages visitées : requêtes bloquées, CSS injecté, scriptlets et leurs erreurs. À activer avant de reproduire un problème, puis à copier."
+  },
+  "opt_debug_copy": {
+    "message": "Copier le journal"
+  },
+  "opt_debug_refresh": {
+    "message": "Actualiser"
+  },
+  "opt_debug_clear": {
+    "message": "Vider"
+  },
+  "opt_debug_copied": {
+    "message": "Copié ✓"
+  },
+  "opt_debug_manual": {
+    "message": "Sélectionné — faites Ctrl+C"
+  },
+  "opt_debug_off": {
+    "message": "Journal désactivé. Activez-le, rechargez la page à problème, puis revenez ici."
+  },
+  "opt_debug_empty": {
+    "message": "Aucun évènement enregistré pour l'instant. Rechargez la page à problème dans un autre onglet, puis cliquez sur Actualiser."
+  },
+  "opt_lists": {
+    "message": "Listes de filtres"
+  },
+  "opt_lists_hint": {
+    "message": "Les listes sont actualisées automatiquement toutes les 24 heures."
+  },
+  "opt_last_update": {
+    "message": "Dernière mise à jour :"
+  },
+  "opt_never": {
+    "message": "jamais"
+  },
+  "opt_rules": {
+    "message": "règles"
+  },
+  "opt_user_filters": {
+    "message": "Mes filtres"
+  },
+  "opt_user_filters_hint": {
+    "message": "Un filtre par ligne, syntaxe EasyList / Adblock Plus (ex. ||ads.example.com^ ou example.com##.banner)."
+  },
+  "opt_whitelist": {
+    "message": "Sites de confiance"
+  },
+  "opt_whitelist_hint": {
+    "message": "Un nom de domaine par ligne (ex. example.com). SandBlock est totalement désactivé sur ces sites."
+  },
+  "opt_save": {
+    "message": "Enregistrer"
+  },
+  "opt_saved": {
+    "message": "Enregistré ✓"
+  },
+  "opt_stats": {
+    "message": "Statistiques"
+  },
+  "opt_stats_total": {
+    "message": "requêtes bloquées depuis l'installation"
+  },
+  "opt_stats_reset": {
+    "message": "Remettre à zéro"
+  },
+  "opt_about": {
+    "message": "SandBlock est open source, ne collecte aucune donnée et fonctionne entièrement sur votre appareil."
+  }
+}

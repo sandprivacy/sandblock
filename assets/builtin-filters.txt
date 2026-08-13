@@ -1,0 +1,70 @@
+! SandBlock — liste de démarrage intégrée
+! Couvre les principales régies publicitaires en attendant le premier
+! téléchargement d'EasyList / EasyPrivacy. Syntaxe Adblock Plus.
+||doubleclick.net^
+||googlesyndication.com^
+||googleadservices.com^
+||adservice.google.com^
+||adservice.google.fr^
+||google-analytics.com^$third-party
+||2mdn.net^
+||amazon-adsystem.com^
+||adnxs.com^
+||adsrvr.org^
+||criteo.com^$third-party
+||criteo.net^$third-party
+||taboola.com^$third-party
+||outbrain.com^$third-party
+||rubiconproject.com^
+||pubmatic.com^
+||openx.net^
+||casalemedia.com^
+||smartadserver.com^$third-party
+||adform.net^
+||yieldlab.net^
+||quantserve.com^
+||scorecardresearch.com^
+||moatads.com^
+||adsafeprotected.com^
+||teads.tv^$third-party
+||advertising.com^
+||bidswitch.net^
+||sharethrough.com^
+||triplelift.com^
+||media.net^$third-party
+||zedo.com^
+||exoclick.com^
+||popads.net^
+||propellerads.com^
+||adcash.com^
+||hilltopads.net^
+||trafficjunky.net^
+||mgid.com^$third-party
+||revcontent.com^$third-party
+||yieldmo.com^
+||sovrn.com^
+||lijit.com^
+||gumgum.com^
+||undertone.com^
+||spotxchange.com^
+||stickyadstv.com^
+||contextweb.com^
+||adition.com^
+||ligatus.com^
+/adsbygoogle.js$script
+/pagead/js/$script,domain=~google.com
+! --- YouTube : contre-mesure au blocage temporel ---
+! Quand YouTube détecte un bloqueur, il programme une temporisation de
+! 17 s avant de démarrer la vidéo. uBlock la raccourcit via
+! `nano-stb, [native code], 17000, 0.001`, mais ce critère ne correspond
+! plus au code actuel de YouTube (mesuré : la minuterie n'était pas
+! interceptée). On vise donc la temporisation par sa seule durée, ce qui
+! reste très étroit.
+www.youtube.com,m.youtube.com,music.youtube.com##+js(nano-stb, , 17000, 0.001)
+
+##.adsbygoogle
+##ins.adsbygoogle
+##[id^="google_ads_iframe"]
+##iframe[src^="https://tpc.googlesyndication.com/"]
+##.ad-leaderboard
+##.ad-banner-wrapper

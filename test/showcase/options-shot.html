@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SandBlock — settings screenshot</title>
+<link rel="stylesheet" href="../../options/options.css">
+<style>
+  html, body { width: 1280px; height: 800px; overflow: hidden; }
+  body { margin: 0; display: flex; align-items: center; }
+  .page { width: 660px; flex: none; padding: 0; margin-left: 90px; }
+  .shot-note {
+    position: absolute; right: 46px; top: 50%; transform: translateY(-50%);
+    width: 330px; color: #e7ecf5;
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .shot-note h2 {
+    font-size: 34px; font-weight: 800; letter-spacing: -.8px; line-height: 1.15;
+    margin: 0 0 14px;
+  }
+  .shot-note h2 em {
+    font-style: normal;
+    background: linear-gradient(90deg, #22d3ee, #818cf8);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .shot-note p { font-size: 16px; line-height: 1.6; color: #97a1b6; margin: 0; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <svg class="logo" viewBox="0 0 96 96" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#818cf8"/>
+        </linearGradient></defs>
+        <path d="M48 4 L86 18 V46 C86 68 70 84 48 92 C26 84 10 68 10 46 V18 Z"
+              fill="none" stroke="url(#lg)" stroke-width="7" stroke-linejoin="round"/>
+        <circle cx="48" cy="48" r="17" fill="none" stroke="url(#lg)" stroke-width="7"/>
+        <line x1="36" y1="60" x2="60" y2="36" stroke="url(#lg)" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1>Sand<em>Block</em></h1>
+        <p>SandBlock Settings</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>General</h2>
+      <div class="row">
+        <div class="row-text">
+          <span class="row-title">Enable blocking</span>
+          <span class="row-hint">Master switch — turns all network and cosmetic filtering on or off.</span>
+        </div>
+        <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+      </div>
+      <div class="row">
+        <div class="row-text">
+          <span class="row-title">Generic cosmetic filtering</span>
+          <span class="row-hint">Hides ad placeholders using EasyList generic CSS rules.</span>
+        </div>
+        <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+      </div>
+      <div class="row">
+        <div class="row-text">
+          <span class="row-title">Scriptlets (YouTube ads)</span>
+          <span class="row-hint">Neutralises ads that network blocking cannot reach.</span>
+        </div>
+        <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Statistics</h2>
+      <div class="stats-row">
+        <span class="big-number">18,402</span>
+        <span class="row-hint">requests blocked since installation</span>
+        <button class="btn ghost">Reset counter</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="shot-note">
+    <h2>Everything stays <em>local</em>.</h2>
+    <p>No account, no telemetry, no data sent anywhere.
+       Your settings and filter lists never leave your device.</p>
+  </div>
+</body>
+</html>

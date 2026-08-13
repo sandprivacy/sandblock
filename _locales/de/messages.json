@@ -1,0 +1,152 @@
+{
+  "extName": {
+    "message": "SandBlock — Werbeblocker"
+  },
+  "extDesc": {
+    "message": "Ultraschneller, eleganter Werbe- und Tracker-Blocker. Token-indizierte Filter-Engine, EasyList-kompatibel, ohne Datenerhebung."
+  },
+  "protection_on": {
+    "message": "Schutz aktiv"
+  },
+  "protection_off": {
+    "message": "Schutz pausiert"
+  },
+  "site_protection": {
+    "message": "Diese Website schützen"
+  },
+  "site_none": {
+    "message": "Keine aktive Seite"
+  },
+  "blocked_page": {
+    "message": "Auf dieser Seite blockiert"
+  },
+  "blocked_total": {
+    "message": "Insgesamt blockiert"
+  },
+  "active_filters": {
+    "message": "aktive Filter"
+  },
+  "settings": {
+    "message": "Einstellungen"
+  },
+  "update_lists": {
+    "message": "Filterlisten aktualisieren"
+  },
+  "updating": {
+    "message": "Wird aktualisiert …"
+  },
+  "updated": {
+    "message": "Aktualisiert"
+  },
+  "update_failed": {
+    "message": "Aktualisierung fehlgeschlagen"
+  },
+  "opt_title": {
+    "message": "SandBlock-Einstellungen"
+  },
+  "opt_general": {
+    "message": "Allgemein"
+  },
+  "opt_enable": {
+    "message": "Blockieren aktivieren"
+  },
+  "opt_enable_hint": {
+    "message": "Hauptschalter — schaltet die gesamte Netzwerk- und Kosmetikfilterung ein oder aus."
+  },
+  "opt_cosmetic": {
+    "message": "Generische Kosmetikfilter"
+  },
+  "opt_cosmetic_hint": {
+    "message": "Blendet Werbeflächen über die generischen CSS-Regeln von EasyList aus. Deaktivieren, wenn eine Website fehlerhaft dargestellt wird."
+  },
+  "opt_scriptlets": {
+    "message": "Scriptlets (YouTube-Werbung)"
+  },
+  "opt_scriptlets_hint": {
+    "message": "Neutralisiert Werbung, die das Netzwerkblockieren nicht erreicht, insbesondere auf YouTube. Zum Prüfen deaktivieren, ob eine defekte Website daran liegt."
+  },
+  "opt_language": {
+    "message": "Sprache der Oberfläche"
+  },
+  "opt_language_hint": {
+    "message": "Standardmäßig folgt SandBlock der Sprache Ihres Browsers und weicht sonst auf Englisch aus."
+  },
+  "opt_language_auto": {
+    "message": "Automatisch (Browser)"
+  },
+  "opt_debug": {
+    "message": "Diagnose"
+  },
+  "opt_debug_enable": {
+    "message": "Protokollierung aktivieren"
+  },
+  "opt_debug_hint": {
+    "message": "Zeichnet jede Aktion auf den besuchten Seiten auf: blockierte Anfragen, eingefügtes CSS, Scriptlets und deren Fehler. Vor dem Nachstellen eines Problems einschalten, danach kopieren."
+  },
+  "opt_debug_copy": {
+    "message": "Protokoll kopieren"
+  },
+  "opt_debug_refresh": {
+    "message": "Aktualisieren"
+  },
+  "opt_debug_clear": {
+    "message": "Leeren"
+  },
+  "opt_debug_copied": {
+    "message": "Kopiert ✓"
+  },
+  "opt_debug_manual": {
+    "message": "Markiert — Strg+C drücken"
+  },
+  "opt_debug_off": {
+    "message": "Protokollierung ist aus. Einschalten, die betroffene Seite neu laden und hierher zurückkehren."
+  },
+  "opt_debug_empty": {
+    "message": "Noch nichts aufgezeichnet. Laden Sie die betroffene Seite in einem anderen Tab neu und klicken Sie dann auf Aktualisieren."
+  },
+  "opt_lists": {
+    "message": "Filterlisten"
+  },
+  "opt_lists_hint": {
+    "message": "Die Listen werden alle 24 Stunden automatisch aktualisiert."
+  },
+  "opt_last_update": {
+    "message": "Letzte Aktualisierung:"
+  },
+  "opt_never": {
+    "message": "nie"
+  },
+  "opt_rules": {
+    "message": "Regeln"
+  },
+  "opt_user_filters": {
+    "message": "Meine Filter"
+  },
+  "opt_user_filters_hint": {
+    "message": "Ein Filter pro Zeile, Syntax von EasyList / Adblock Plus (z. B. ||ads.example.com^ oder example.com##.banner)."
+  },
+  "opt_whitelist": {
+    "message": "Vertrauenswürdige Websites"
+  },
+  "opt_whitelist_hint": {
+    "message": "Ein Hostname pro Zeile (z. B. example.com). Auf diesen Websites ist SandBlock vollständig deaktiviert."
+  },
+  "opt_save": {
+    "message": "Speichern"
+  },
+  "opt_saved": {
+    "message": "Gespeichert ✓"
+  },
+  "opt_stats": {
+    "message": "Statistik"
+  },
+  "opt_stats_total": {
+    "message": "seit der Installation blockierte Anfragen"
+  },
+  "opt_stats_reset": {
+    "message": "Zähler zurücksetzen"
+  },
+  "opt_about": {
+    "message": "SandBlock ist quelloffen, erhebt keine Daten und läuft vollständig auf Ihrem Gerät."
+  }
+}

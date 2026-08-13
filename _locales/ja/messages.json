@@ -1,0 +1,152 @@
+{
+  "extName": {
+    "message": "SandBlock — 広告ブロッカー"
+  },
+  "extDesc": {
+    "message": "高速で洗練された広告・トラッカーブロッカー。トークン索引方式のフィルタエンジン、EasyList 互換、データ収集は一切なし。"
+  },
+  "protection_on": {
+    "message": "保護は有効です"
+  },
+  "protection_off": {
+    "message": "保護は一時停止中"
+  },
+  "site_protection": {
+    "message": "このサイトを保護"
+  },
+  "site_none": {
+    "message": "アクティブなページがありません"
+  },
+  "blocked_page": {
+    "message": "このページでブロック"
+  },
+  "blocked_total": {
+    "message": "累計ブロック数"
+  },
+  "active_filters": {
+    "message": "件の有効なフィルタ"
+  },
+  "settings": {
+    "message": "設定"
+  },
+  "update_lists": {
+    "message": "フィルタリストを更新"
+  },
+  "updating": {
+    "message": "更新中…"
+  },
+  "updated": {
+    "message": "更新しました"
+  },
+  "update_failed": {
+    "message": "更新に失敗しました"
+  },
+  "opt_title": {
+    "message": "SandBlock の設定"
+  },
+  "opt_general": {
+    "message": "一般"
+  },
+  "opt_enable": {
+    "message": "ブロックを有効にする"
+  },
+  "opt_enable_hint": {
+    "message": "メインスイッチ — ネットワークフィルタと外観フィルタのすべてを切り替えます。"
+  },
+  "opt_cosmetic": {
+    "message": "汎用の外観フィルタ"
+  },
+  "opt_cosmetic_hint": {
+    "message": "EasyList の汎用 CSS ルールで広告枠を非表示にします。サイトの表示が崩れる場合は無効にしてください。"
+  },
+  "opt_scriptlets": {
+    "message": "スクリプトレット（YouTube 広告）"
+  },
+  "opt_scriptlets_hint": {
+    "message": "ネットワークブロックでは届かない広告、特に YouTube の広告を無効化します。サイトが壊れた原因を切り分けるにはオフにしてください。"
+  },
+  "opt_language": {
+    "message": "表示言語"
+  },
+  "opt_language_hint": {
+    "message": "既定では SandBlock はブラウザーの言語に従い、該当がなければ英語を使います。"
+  },
+  "opt_language_auto": {
+    "message": "自動（ブラウザーに従う）"
+  },
+  "opt_debug": {
+    "message": "診断"
+  },
+  "opt_debug_enable": {
+    "message": "ログを有効にする"
+  },
+  "opt_debug_hint": {
+    "message": "閲覧したページでの動作をすべて記録します。ブロックしたリクエスト、注入した CSS、スクリプトレットとそのエラーなど。問題を再現する前に有効にし、あとでコピーしてください。"
+  },
+  "opt_debug_copy": {
+    "message": "ログをコピー"
+  },
+  "opt_debug_refresh": {
+    "message": "更新"
+  },
+  "opt_debug_clear": {
+    "message": "消去"
+  },
+  "opt_debug_copied": {
+    "message": "コピーしました ✓"
+  },
+  "opt_debug_manual": {
+    "message": "選択しました — Ctrl+C を押してください"
+  },
+  "opt_debug_off": {
+    "message": "ログは無効です。有効にしてから問題のページを再読み込みし、ここに戻ってください。"
+  },
+  "opt_debug_empty": {
+    "message": "まだ何も記録されていません。別のタブで問題のページを再読み込みしてから「更新」を押してください。"
+  },
+  "opt_lists": {
+    "message": "フィルタリスト"
+  },
+  "opt_lists_hint": {
+    "message": "リストは 24 時間ごとに自動更新されます。"
+  },
+  "opt_last_update": {
+    "message": "最終更新:"
+  },
+  "opt_never": {
+    "message": "未更新"
+  },
+  "opt_rules": {
+    "message": "件のルール"
+  },
+  "opt_user_filters": {
+    "message": "自分のフィルタ"
+  },
+  "opt_user_filters_hint": {
+    "message": "1 行に 1 つ、EasyList / Adblock Plus の書式で記述します（例: ||ads.example.com^ または example.com##.banner）。"
+  },
+  "opt_whitelist": {
+    "message": "信頼するサイト"
+  },
+  "opt_whitelist_hint": {
+    "message": "1 行に 1 つのホスト名（例: example.com）。これらのサイトでは SandBlock は完全に無効になります。"
+  },
+  "opt_save": {
+    "message": "保存"
+  },
+  "opt_saved": {
+    "message": "保存しました ✓"
+  },
+  "opt_stats": {
+    "message": "統計"
+  },
+  "opt_stats_total": {
+    "message": "インストール以降にブロックしたリクエスト"
+  },
+  "opt_stats_reset": {
+    "message": "カウンターをリセット"
+  },
+  "opt_about": {
+    "message": "SandBlock はオープンソースで、データを収集せず、すべてお使いの端末上で動作します。"
+  }
+}

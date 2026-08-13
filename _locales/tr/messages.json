@@ -1,0 +1,152 @@
+{
+  "extName": {
+    "message": "SandBlock — Reklam Engelleyici"
+  },
+  "extDesc": {
+    "message": "Çok hızlı ve şık reklam ile izleyici engelleyici. Belirteç dizinli filtreleme motoru, EasyList uyumlu, hiçbir veri toplamaz."
+  },
+  "protection_on": {
+    "message": "Koruma etkin"
+  },
+  "protection_off": {
+    "message": "Koruma duraklatıldı"
+  },
+  "site_protection": {
+    "message": "Bu siteyi koru"
+  },
+  "site_none": {
+    "message": "Etkin sayfa yok"
+  },
+  "blocked_page": {
+    "message": "Bu sayfada engellenen"
+  },
+  "blocked_total": {
+    "message": "Toplam engellenen"
+  },
+  "active_filters": {
+    "message": "etkin filtre"
+  },
+  "settings": {
+    "message": "Ayarlar"
+  },
+  "update_lists": {
+    "message": "Filtre listelerini güncelle"
+  },
+  "updating": {
+    "message": "Güncelleniyor…"
+  },
+  "updated": {
+    "message": "Güncellendi"
+  },
+  "update_failed": {
+    "message": "Güncelleme başarısız"
+  },
+  "opt_title": {
+    "message": "SandBlock Ayarları"
+  },
+  "opt_general": {
+    "message": "Genel"
+  },
+  "opt_enable": {
+    "message": "Engellemeyi etkinleştir"
+  },
+  "opt_enable_hint": {
+    "message": "Ana anahtar — tüm ağ ve görsel filtrelemeyi açar veya kapatır."
+  },
+  "opt_cosmetic": {
+    "message": "Genel görsel filtreleme"
+  },
+  "opt_cosmetic_hint": {
+    "message": "EasyList'in genel CSS kurallarıyla reklam alanlarını gizler. Bir site bozuk görünüyorsa kapatın."
+  },
+  "opt_scriptlets": {
+    "message": "Scriptlet'ler (YouTube reklamları)"
+  },
+  "opt_scriptlets_hint": {
+    "message": "Ağ engellemenin ulaşamadığı reklamları, özellikle YouTube'dakileri etkisiz kılar. Bozulan bir sitenin nedeni bunlar mı diye bakmak için kapatın."
+  },
+  "opt_language": {
+    "message": "Arayüz dili"
+  },
+  "opt_language_hint": {
+    "message": "SandBlock varsayılan olarak tarayıcınızın dilini izler, yoksa İngilizceye döner."
+  },
+  "opt_language_auto": {
+    "message": "Otomatik (tarayıcı)"
+  },
+  "opt_debug": {
+    "message": "Tanılama"
+  },
+  "opt_debug_enable": {
+    "message": "Günlüğü etkinleştir"
+  },
+  "opt_debug_hint": {
+    "message": "Ziyaret ettiğiniz sayfalardaki her işlemi kaydeder: engellenen istekler, eklenen CSS, scriptlet'ler ve hataları. Bir sorunu yeniden oluşturmadan önce açın, sonra kopyalayın."
+  },
+  "opt_debug_copy": {
+    "message": "Günlüğü kopyala"
+  },
+  "opt_debug_refresh": {
+    "message": "Yenile"
+  },
+  "opt_debug_clear": {
+    "message": "Temizle"
+  },
+  "opt_debug_copied": {
+    "message": "Kopyalandı ✓"
+  },
+  "opt_debug_manual": {
+    "message": "Seçildi — Ctrl+C'ye basın"
+  },
+  "opt_debug_off": {
+    "message": "Günlük kapalı. Açın, sorunlu sayfayı yeniden yükleyin ve buraya dönün."
+  },
+  "opt_debug_empty": {
+    "message": "Henüz kayıt yok. Sorunlu sayfayı başka bir sekmede yeniden yükleyin, ardından Yenile'ye tıklayın."
+  },
+  "opt_lists": {
+    "message": "Filtre listeleri"
+  },
+  "opt_lists_hint": {
+    "message": "Listeler her 24 saatte bir otomatik olarak yenilenir."
+  },
+  "opt_last_update": {
+    "message": "Son güncelleme:"
+  },
+  "opt_never": {
+    "message": "hiç"
+  },
+  "opt_rules": {
+    "message": "kural"
+  },
+  "opt_user_filters": {
+    "message": "Filtrelerim"
+  },
+  "opt_user_filters_hint": {
+    "message": "Her satıra bir filtre, EasyList / Adblock Plus söz dizimi (örn. ||ads.example.com^ veya example.com##.banner)."
+  },
+  "opt_whitelist": {
+    "message": "Güvenilen siteler"
+  },
+  "opt_whitelist_hint": {
+    "message": "Her satıra bir ana makine adı (örn. example.com). Bu sitelerde SandBlock tamamen devre dışıdır."
+  },
+  "opt_save": {
+    "message": "Kaydet"
+  },
+  "opt_saved": {
+    "message": "Kaydedildi ✓"
+  },
+  "opt_stats": {
+    "message": "İstatistikler"
+  },
+  "opt_stats_total": {
+    "message": "kurulumdan bu yana engellenen istek"
+  },
+  "opt_stats_reset": {
+    "message": "Sayacı sıfırla"
+  },
+  "opt_about": {
+    "message": "SandBlock açık kaynaklıdır, veri toplamaz ve tamamen cihazınızda çalışır."
+  }
+}

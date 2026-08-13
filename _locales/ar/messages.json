@@ -1,0 +1,152 @@
+{
+  "extName": {
+    "message": "SandBlock — مانع الإعلانات"
+  },
+  "extDesc": {
+    "message": "مانع إعلانات ومتتبِّعات سريع وأنيق. محرك ترشيح مفهرس بالرموز، متوافق مع EasyList، دون أي جمع للبيانات."
+  },
+  "protection_on": {
+    "message": "الحماية مفعَّلة"
+  },
+  "protection_off": {
+    "message": "الحماية موقوفة مؤقتًا"
+  },
+  "site_protection": {
+    "message": "حماية هذا الموقع"
+  },
+  "site_none": {
+    "message": "لا توجد صفحة نشطة"
+  },
+  "blocked_page": {
+    "message": "محظورة في هذه الصفحة"
+  },
+  "blocked_total": {
+    "message": "محظورة إجمالًا"
+  },
+  "active_filters": {
+    "message": "مرشِّح نشط"
+  },
+  "settings": {
+    "message": "الإعدادات"
+  },
+  "update_lists": {
+    "message": "تحديث قوائم الترشيح"
+  },
+  "updating": {
+    "message": "جارٍ التحديث…"
+  },
+  "updated": {
+    "message": "تم التحديث"
+  },
+  "update_failed": {
+    "message": "فشل التحديث"
+  },
+  "opt_title": {
+    "message": "إعدادات SandBlock"
+  },
+  "opt_general": {
+    "message": "عام"
+  },
+  "opt_enable": {
+    "message": "تفعيل الحظر"
+  },
+  "opt_enable_hint": {
+    "message": "المفتاح الرئيسي — يشغّل أو يوقف كل الترشيح الشبكي والتجميلي."
+  },
+  "opt_cosmetic": {
+    "message": "الترشيح التجميلي العام"
+  },
+  "opt_cosmetic_hint": {
+    "message": "يخفي مساحات الإعلانات باستخدام قواعد CSS العامة من EasyList. أوقفه إذا بدا موقع ما معطلًا."
+  },
+  "opt_scriptlets": {
+    "message": "النصوص البرمجية (إعلانات يوتيوب)"
+  },
+  "opt_scriptlets_hint": {
+    "message": "يعطّل الإعلانات التي لا يبلغها الحظر الشبكي، خصوصًا على يوتيوب. أوقفه للتحقق مما إذا كانت سببًا في تعطّل موقع."
+  },
+  "opt_language": {
+    "message": "لغة الواجهة"
+  },
+  "opt_language_hint": {
+    "message": "يتبع SandBlock افتراضيًا لغة متصفحك، ويعود إلى الإنجليزية عند عدم توفرها."
+  },
+  "opt_language_auto": {
+    "message": "تلقائي (المتصفح)"
+  },
+  "opt_debug": {
+    "message": "التشخيص"
+  },
+  "opt_debug_enable": {
+    "message": "تفعيل السجل"
+  },
+  "opt_debug_hint": {
+    "message": "يسجّل كل إجراء على الصفحات التي تزورها: الطلبات المحظورة، وCSS المُحقَن، والنصوص البرمجية وأخطاؤها. فعّله قبل إعادة إنتاج المشكلة ثم انسخه."
+  },
+  "opt_debug_copy": {
+    "message": "نسخ السجل"
+  },
+  "opt_debug_refresh": {
+    "message": "تحديث"
+  },
+  "opt_debug_clear": {
+    "message": "إفراغ"
+  },
+  "opt_debug_copied": {
+    "message": "تم النسخ ✓"
+  },
+  "opt_debug_manual": {
+    "message": "محدَّد — اضغط Ctrl+C"
+  },
+  "opt_debug_off": {
+    "message": "السجل متوقف. فعّله، وأعد تحميل الصفحة المعطّلة، ثم عد إلى هنا."
+  },
+  "opt_debug_empty": {
+    "message": "لم يُسجَّل شيء بعد. أعد تحميل الصفحة المعطّلة في لسان آخر ثم اضغط تحديث."
+  },
+  "opt_lists": {
+    "message": "قوائم الترشيح"
+  },
+  "opt_lists_hint": {
+    "message": "تُحدَّث القوائم تلقائيًا كل 24 ساعة."
+  },
+  "opt_last_update": {
+    "message": "آخر تحديث:"
+  },
+  "opt_never": {
+    "message": "أبدًا"
+  },
+  "opt_rules": {
+    "message": "قاعدة"
+  },
+  "opt_user_filters": {
+    "message": "مرشِّحاتي"
+  },
+  "opt_user_filters_hint": {
+    "message": "مرشِّح واحد في كل سطر، بصيغة EasyList / Adblock Plus (مثل ‎||ads.example.com^‎ أو ‎example.com##.banner‎)."
+  },
+  "opt_whitelist": {
+    "message": "المواقع الموثوقة"
+  },
+  "opt_whitelist_hint": {
+    "message": "اسم مضيف واحد في كل سطر (مثل ‎example.com‎). يُعطَّل SandBlock بالكامل على هذه المواقع."
+  },
+  "opt_save": {
+    "message": "حفظ"
+  },
+  "opt_saved": {
+    "message": "تم الحفظ ✓"
+  },
+  "opt_stats": {
+    "message": "الإحصاءات"
+  },
+  "opt_stats_total": {
+    "message": "طلبًا محظورًا منذ التثبيت"
+  },
+  "opt_stats_reset": {
+    "message": "تصفير العدّاد"
+  },
+  "opt_about": {
+    "message": "‏SandBlock مفتوح المصدر، لا يجمع أي بيانات، ويعمل بالكامل على جهازك."
+  }
+}

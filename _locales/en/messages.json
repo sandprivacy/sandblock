@@ -1,0 +1,152 @@
+{
+  "extName": {
+    "message": "SandBlock — Ad Blocker"
+  },
+  "extDesc": {
+    "message": "Ultra-fast, elegant ad & tracker blocker. Token-indexed filtering engine, EasyList compatible, zero data collection."
+  },
+  "protection_on": {
+    "message": "Protection enabled"
+  },
+  "protection_off": {
+    "message": "Protection paused"
+  },
+  "site_protection": {
+    "message": "Protect this site"
+  },
+  "site_none": {
+    "message": "No active page"
+  },
+  "blocked_page": {
+    "message": "Blocked on this page"
+  },
+  "blocked_total": {
+    "message": "Blocked in total"
+  },
+  "active_filters": {
+    "message": "active filters"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "update_lists": {
+    "message": "Update filter lists"
+  },
+  "updating": {
+    "message": "Updating…"
+  },
+  "updated": {
+    "message": "Updated"
+  },
+  "update_failed": {
+    "message": "Update failed"
+  },
+  "opt_title": {
+    "message": "SandBlock Settings"
+  },
+  "opt_general": {
+    "message": "General"
+  },
+  "opt_enable": {
+    "message": "Enable blocking"
+  },
+  "opt_enable_hint": {
+    "message": "Master switch — turns all network and cosmetic filtering on or off."
+  },
+  "opt_cosmetic": {
+    "message": "Generic cosmetic filtering"
+  },
+  "opt_cosmetic_hint": {
+    "message": "Hides ad placeholders using EasyList generic CSS rules. Disable if a site looks broken."
+  },
+  "opt_scriptlets": {
+    "message": "Scriptlets (YouTube ads)"
+  },
+  "opt_scriptlets_hint": {
+    "message": "Neutralises ads that network blocking cannot reach, notably on YouTube. Turn off to check whether a broken site is broken because of them."
+  },
+  "opt_language": {
+    "message": "Interface language"
+  },
+  "opt_language_hint": {
+    "message": "By default SandBlock follows your browser's language, falling back to English."
+  },
+  "opt_language_auto": {
+    "message": "Automatic (browser)"
+  },
+  "opt_debug": {
+    "message": "Diagnostics"
+  },
+  "opt_debug_enable": {
+    "message": "Enable logging"
+  },
+  "opt_debug_hint": {
+    "message": "Records every action taken on the pages you visit: blocked requests, injected CSS, scriptlets and their errors. Turn on before reproducing a problem, then copy."
+  },
+  "opt_debug_copy": {
+    "message": "Copy log"
+  },
+  "opt_debug_refresh": {
+    "message": "Refresh"
+  },
+  "opt_debug_clear": {
+    "message": "Clear"
+  },
+  "opt_debug_copied": {
+    "message": "Copied ✓"
+  },
+  "opt_debug_manual": {
+    "message": "Selected — press Ctrl+C"
+  },
+  "opt_debug_off": {
+    "message": "Logging is off. Turn it on, reload the problem page, then come back here."
+  },
+  "opt_debug_empty": {
+    "message": "Nothing recorded yet. Reload the problem page in another tab, then click Refresh."
+  },
+  "opt_lists": {
+    "message": "Filter lists"
+  },
+  "opt_lists_hint": {
+    "message": "Lists are refreshed automatically every 24 hours."
+  },
+  "opt_last_update": {
+    "message": "Last update:"
+  },
+  "opt_never": {
+    "message": "never"
+  },
+  "opt_rules": {
+    "message": "rules"
+  },
+  "opt_user_filters": {
+    "message": "My filters"
+  },
+  "opt_user_filters_hint": {
+    "message": "One filter per line, EasyList / Adblock Plus syntax (e.g. ||ads.example.com^ or example.com##.banner)."
+  },
+  "opt_whitelist": {
+    "message": "Trusted sites"
+  },
+  "opt_whitelist_hint": {
+    "message": "One hostname per line (e.g. example.com). SandBlock is fully disabled on these sites."
+  },
+  "opt_save": {
+    "message": "Save"
+  },
+  "opt_saved": {
+    "message": "Saved ✓"
+  },
+  "opt_stats": {
+    "message": "Statistics"
+  },
+  "opt_stats_total": {
+    "message": "requests blocked since installation"
+  },
+  "opt_stats_reset": {
+    "message": "Reset counter"
+  },
+  "opt_about": {
+    "message": "SandBlock is open source, collects no data, and runs entirely on your device."
+  }
+}

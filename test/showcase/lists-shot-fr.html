@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>SandBlock — capture listes</title>
+<link rel="stylesheet" href="../../options/options.css">
+<style>
+  html, body { width: 1280px; height: 800px; overflow: hidden; }
+  body { margin: 0; display: flex; align-items: center; }
+  .page { width: 640px; flex: none; margin-left: 82px; padding: 0; }
+  .shot-note {
+    position: absolute; right: 44px; top: 50%; transform: translateY(-50%);
+    width: 330px; color: #e7ecf5;
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .shot-note h2 {
+    font-size: 34px; font-weight: 800; letter-spacing: -.8px; line-height: 1.15;
+    margin: 0 0 14px;
+  }
+  .shot-note h2 em {
+    font-style: normal;
+    background: linear-gradient(90deg, #22d3ee, #818cf8);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .shot-note p { font-size: 16px; line-height: 1.6; color: #97a1b6; margin: 0 0 20px; }
+  .metric { display: flex; align-items: baseline; gap: 10px; margin-bottom: 9px; }
+  .metric b {
+    font-size: 22px; font-weight: 800;
+    background: linear-gradient(90deg, #22d3ee, #818cf8);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .metric span { font-size: 14px; color: #97a1b6; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <section class="card">
+      <div class="card-head">
+        <h2>Listes de filtres</h2>
+        <button class="btn">Mettre à jour les listes</button>
+      </div>
+      <p class="row-hint">Les listes sont actualisées automatiquement toutes les 24 heures.</p>
+      <div>
+        <div class="list-row">
+          <div class="list-info">
+            <span class="list-title">SandBlock — correctifs</span>
+            <span class="list-meta">Dernière mise à jour : 27 juil. 2026, 14:02 — 71 règles</span>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+        <div class="list-row">
+          <div class="list-info">
+            <span class="list-title">EasyList</span>
+            <span class="list-meta">Dernière mise à jour : 27 juil. 2026, 14:02 — 83 735 règles</span>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+        <div class="list-row">
+          <div class="list-info">
+            <span class="list-title">EasyPrivacy</span>
+            <span class="list-meta">Dernière mise à jour : 27 juil. 2026, 14:02 — 54 118 règles</span>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+        <div class="list-row">
+          <div class="list-info">
+            <span class="list-title">Liste FR (EasyList France)</span>
+            <span class="list-meta">Dernière mise à jour : 27 juil. 2026, 14:02 — 14 260 règles</span>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+        <div class="list-row">
+          <div class="list-info">
+            <span class="list-title">uBlock filters — Ads</span>
+            <span class="list-meta">Dernière mise à jour : 27 juil. 2026, 14:02 — 8 902 règles</span>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+        <div class="list-row">
+          <div class="list-info">
+            <span class="list-title">uBlock filters — Quick fixes</span>
+            <span class="list-meta">Dernière mise à jour : 27 juil. 2026, 14:02 — 479 règles</span>
+          </div>
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+      </div>
+      <p class="compile-info">156 760 filtres actifs · 573 ms</p>
+    </section>
+  </div>
+
+  <div class="shot-note">
+    <h2>Toujours à <em>jour</em>.</h2>
+    <p>Huit listes de référence, rafraîchies automatiquement.
+       Vous pouvez ajouter vos propres filtres et vos sites de confiance.</p>
+    <div class="metric"><b>156 760</b><span>filtres compilés</span></div>
+    <div class="metric"><b>573 ms</b><span>au démarrage, une seule fois</span></div>
+    <div class="metric"><b>0,17 ms</b><span>par requête filtrée</span></div>
+  </div>
+</body>
+</html>
