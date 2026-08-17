@@ -69,6 +69,16 @@ const DEFAULT_LISTS = [
     url: 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt',
     enabled: true,
   },
+  {
+    // Bandeaux de cookies. La liste MASQUE les bandeaux, elle ne refuse
+    // pas les cookies à la place de l'utilisateur : sans clic sur
+    // « Accepter », la plupart des sites ne posent tout simplement rien.
+    // Le libellé de l'interface doit dire « masquer », jamais « refuser ».
+    id: 'ublock_cookies',
+    title: 'uBlock filters — Cookie banners',
+    url: 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/annoyances-cookies.txt',
+    enabled: true,
+  },
 ];
 
 const UPDATE_PERIOD_MS = 24 * 3600 * 1000; // fraîcheur cible : 24 h

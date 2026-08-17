@@ -146,7 +146,55 @@
   "opt_stats_reset": {
     "message": "Zähler zurücksetzen"
   },
+  "opt_dash": {
+    "message": "Blockierverlauf"
+  },
+  "opt_dash_hint": {
+    "message": "Die letzten 30 Tage, ausschließlich auf Ihrem Gerät gespeichert. Es wird nie etwas übertragen."
+  },
+  "opt_dash_period": {
+    "message": "in 30 Tagen blockiert"
+  },
+  "opt_dash_today": {
+    "message": "heute"
+  },
+  "opt_dash_top": {
+    "message": "Am häufigsten blockierte Domains"
+  },
+  "opt_dash_empty": {
+    "message": "Noch nichts aufgezeichnet. Surfen Sie ein wenig und kommen Sie zurück."
+  },
+  "opt_dash_clear": {
+    "message": "Verlauf löschen"
+  },
+  "opt_dash_cleared": {
+    "message": "Verlauf gelöscht ✓"
+  },
+  "opt_dash_note": {
+    "message": "Dieser Verlauf bleibt im Browser. Wer diesen Rechner benutzt, kann ihn lesen — löschen Sie ihn, wenn Sie das Gerät teilen."
+  },
   "opt_about": {
     "message": "SandBlock ist quelloffen, erhebt keine Daten und läuft vollständig auf Ihrem Gerät."
+  },
+  "trouble_cta": {
+    "message": "Seite defekt? Hier deaktivieren"
+  },
+  "zap_tip": {
+    "message": "Element ausblenden"
+  },
+  "zap_banner": {
+    "message": "Klicken Sie auf ein Element, um es auszublenden"
+  },
+  "zap_esc": {
+    "message": "Esc zum Abbrechen"
+  },
+  "review_ask": {
+    "message": "Gefällt Ihnen SandBlock?"
+  },
+  "review_rate": {
+    "message": "Bewerten"
+  },
+  "review_later": {
+    "message": "Nein danke"
   }
 }

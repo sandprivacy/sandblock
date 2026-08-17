@@ -12,6 +12,8 @@ let nf = new Intl.NumberFormat(SBI18N.locale());
 let df = new Intl.DateTimeFormat(SBI18N.locale(), {
   dateStyle: 'medium', timeStyle: 'short',
 });
+/* Date seule, pour les totaux quotidiens du graphique. */
+let dayFmt = new Intl.DateTimeFormat(SBI18N.locale(), { dateStyle: 'medium' });
 
 SBI18N.apply();
 $('version').textContent = 'SandBlock v' + browser.runtime.getManifest().version;
@@ -143,13 +145,146 @@ $('languageSelect').addEventListener('change', async (ev) => {
   df = new Intl.DateTimeFormat(SBI18N.locale(), {
     dateStyle: 'medium', timeStyle: 'short',
   });
+  dayFmt = new Intl.DateTimeFormat(SBI18N.locale(), { dateStyle: 'medium' });
   SBI18N.apply();
   fillLanguageSelect();
   const fresh = await browser.runtime.sendMessage({ type: 'options:get' });
   $('totalBlocked').textContent = nf.format(fresh.totalBlocked);
   renderLists(fresh.lists);
   renderCompileInfo(fresh.info);
+  await refreshDashboard();  // nombres et dates du graphique suivent la langue
   await refreshDebug();
+});
+
+/* ---------------- historique des blocages ---------------- */
+
+const SVG_NS = 'http://www.w3.org/2000/svg';
+const el = (name, attrs) => {
+  const node = document.createElementNS(SVG_NS, name);
+  for (const [k, v] of Object.entries(attrs || {})) node.setAttribute(k, String(v));
+  return node;
+};
+
+/** Graphique en barres, construit en SVG — aucune bibliothèque. */
+function renderChart(days) {
+  const host = $('dashChart');
+  host.textContent = '';
+  const W = 700;
+  const H = 116;
+  const BOTTOM = 18;          // place pour les dates
+  const max = Math.max(1, ...days.map((d) => d.total));
+  const slot = W / days.length;
+  const barW = Math.max(3, slot - 3);
+
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, preserveAspectRatio: 'none' });
+
+  const defs = el('defs', {});
+  const grad = el('linearGradient', { id: 'dashGradient', x1: 0, y1: 1, x2: 0, y2: 0 });
+  grad.append(
+    el('stop', { offset: '0', 'stop-color': '#22d3ee' }),
+    el('stop', { offset: '1', 'stop-color': '#818cf8' })
+  );
+  defs.append(grad);
+  svg.append(defs);
+
+  days.forEach((day, i) => {
+    const usable = H - BOTTOM;
+    const h = day.total === 0 ? 2 : Math.max(3, (day.total / max) * usable);
+    const rect = el('rect', {
+      x: i * slot + (slot - barW) / 2,
+      y: usable - h,
+      width: barW,
+      height: h,
+      rx: Math.min(2, barW / 2),
+      class: day.total === 0 ? 'dash-bar-empty' : 'dash-bar',
+    });
+    const title = document.createElementNS(SVG_NS, 'title');
+    // `df` porte une heure, dénuée de sens pour un total quotidien.
+    title.textContent = `${dayFmt.format(new Date(day.date + 'T12:00:00'))} — ${nf.format(day.total)}`;
+    rect.append(title);
+    svg.append(rect);
+
+    // Une date sur sept, plus la dernière — mais jamais deux repères
+    // voisins, sinon les libellés se chevauchent en bout de graphique.
+    const last = days.length - 1;
+    const periodic = i % 7 === 0 && last - i > 3;
+    if (periodic || i === last) {
+      const label = el('text', {
+        x: i * slot + slot / 2, y: H - 4,
+        'text-anchor': i === last ? 'end' : 'middle',
+        class: 'dash-axis',
+      });
+      label.textContent = day.date.slice(5).replace('-', '/');
+      svg.append(label);
+    }
+  });
+
+  host.append(svg);
+}
+
+function renderTop(top) {
+  const host = $('dashTop');
+  host.textContent = '';
+  const max = top.length ? top[0][1] : 1;
+  for (const [domain, count] of top) {
+    const row = document.createElement('div');
+    row.className = 'dash-row';
+
+    const name = document.createElement('span');
+    name.className = 'dash-domain';
+    name.textContent = domain;   // jamais innerHTML : le domaine vient du réseau
+
+    const track = document.createElement('div');
+    track.className = 'dash-track';
+    const fill = document.createElement('div');
+    fill.className = 'dash-fill';
+    fill.style.width = `${Math.max(2, (count / max) * 100)}%`;
+    track.append(fill);
+
+    const n = document.createElement('span');
+    n.className = 'dash-count';
+    n.textContent = nf.format(count);
+
+    row.append(name, track, n);
+    host.append(row);
+  }
+}
+
+function renderDashboard(s) {
+  $('dashPeriod').textContent = nf.format(s.period);
+  $('dashToday').textContent = nf.format(s.today);
+  const empty = s.period === 0;
+  $('dashEmpty').hidden = !empty;
+  $('dashChart').hidden = empty;
+  $('dashTopTitle').hidden = empty;
+  if (!empty) {
+    renderChart(s.days);
+    renderTop(s.top);
+  } else {
+    $('dashTop').textContent = '';
+  }
+}
+
+async function refreshDashboard() {
+  const s = await browser.runtime.sendMessage({ type: 'stats:get' });
+  renderDashboard(s);
+}
+
+refreshDashboard();
+
+// L'onglet des réglages reste souvent ouvert pendant qu'on navigue à côté.
+// Sans ça, on revient sur des chiffres figés et on croit que rien ne compte.
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) refreshDashboard();
+});
+
+$('dashClear').addEventListener('click', async () => {
+  const s = await browser.runtime.sendMessage({ type: 'stats:clear' });
+  renderDashboard(s);
+  const note = $('dashNote');
+  note.textContent = msg('opt_dash_cleared');
+  note.classList.add('show');
+  setTimeout(() => note.classList.remove('show'), 1800);
 });
 
 /* ---------------- diagnostic ---------------- */

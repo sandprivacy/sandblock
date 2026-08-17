@@ -12,7 +12,7 @@ signaux d'alerte automatiques chez les relecteurs AMO ; les ignorer
 rallonge la validation de plusieurs semaines. Copier tel quel :
 
 ```
-Content blocker, same architecture as uBlock Origin (GPL-3.0). Two points
+Content blocker, same architecture as uBlock Origin (GPL-3.0). Three points
 usually raise questions:
 
 1. FILTER LISTS ARE DATA, NOT CODE. Lists fetched at runtime (EasyList,
@@ -31,13 +31,22 @@ See buildCode(). Page-world execution is required, not a convenience:
 patching setTimeout or appendChild across the Xray boundary stops large
 sites from loading at all.
 
+3. ELEMENT ZAPPER — js/content/zapper.js, injected only when the user
+clicks the button in the popup, never automatically. It draws a highlight
+in a closed shadow root and sets display:none on the clicked element for
+the current page view only. It writes nothing, generates no selector, and
+persists nothing.
+
 No eval(), no new Function(), no remote code. No data collection: no
-analytics, no telemetry, all state in storage.local.
+analytics, no telemetry, all state in storage.local. The one-time review
+invitation in the popup is gated on local counters and opens the AMO
+listing in a tab; it sends nothing.
 
 PERMISSIONS. webRequest + webRequestBlocking + <all_urls>: cancel ad
 requests before they are sent — the core function, and declarativeNetRequest
 would lose dynamic filtering. webNavigation: inject scriptlets at
-document_start. tabs: insertCSS into the right frame, per-tab counter.
+document_start. tabs: insertCSS into the right frame, per-tab counter,
+on-demand zapper.
 storage + unlimitedStorage: cache ~10 MB of lists. alarms: refresh every 24 h.
 
 SOURCE. The package is the complete, unmodified source: no build step, no

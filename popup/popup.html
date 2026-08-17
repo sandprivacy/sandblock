@@ -49,6 +49,34 @@
       <span class="site-hint" data-i18n="site_protection"></span>
     </section>
 
+    <!-- Actions sur la page courante, libellées et pleine largeur. Le
+         masquage d'élément a d'abord vécu dans le pied, en icône nue
+         parmi deux autres : indécouvrable. Une fonction qu'on ne trouve
+         pas n'existe pas.
+
+         La sortie de secours reste volontairement SANS détection
+         automatique de casse : un faux positif annonce une page cassée
+         qui va bien, et trois suffisent à ce que plus personne n'écoute. -->
+    <div class="page-actions" id="pageActions" hidden>
+      <button class="page-action" id="zapBtn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 2.2v3.4M12 18.4v3.4M2.2 12h3.4M18.4 12h3.4"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span data-i18n="zap_tip"></span>
+      </button>
+      <button class="page-action warn" id="troubleBtn" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3.6 21.2 19.8H2.8z" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linejoin="round"/>
+          <path d="M12 9.6v4.2M12 16.6v.6" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span data-i18n="trouble_cta"></span>
+      </button>
+    </div>
+
     <section class="stats">
       <div class="stat">
         <span class="stat-value" id="statPage">0</span>
@@ -60,6 +88,14 @@
       </div>
     </section>
   </main>
+
+  <section class="review" id="reviewCard" hidden>
+    <span class="review-ask" data-i18n="review_ask"></span>
+    <div class="review-actions">
+      <button class="btn-mini ghost" id="reviewLater" data-i18n="review_later"></button>
+      <button class="btn-mini" id="reviewRate" data-i18n="review_rate"></button>
+    </div>
+  </section>
 
   <footer class="footer">
     <span class="filters-count" id="filtersCount"></span>

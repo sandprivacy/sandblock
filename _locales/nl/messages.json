@@ -146,7 +146,55 @@
   "opt_stats_reset": {
     "message": "Teller op nul zetten"
   },
+  "opt_dash": {
+    "message": "Blokkeergeschiedenis"
+  },
+  "opt_dash_hint": {
+    "message": "De laatste 30 dagen, uitsluitend op uw apparaat bewaard. Er wordt nooit iets verzonden."
+  },
+  "opt_dash_period": {
+    "message": "geblokkeerd in 30 dagen"
+  },
+  "opt_dash_today": {
+    "message": "vandaag"
+  },
+  "opt_dash_top": {
+    "message": "Meest geblokkeerde domeinen"
+  },
+  "opt_dash_empty": {
+    "message": "Nog niets vastgelegd. Surf even en kom terug."
+  },
+  "opt_dash_clear": {
+    "message": "Geschiedenis wissen"
+  },
+  "opt_dash_cleared": {
+    "message": "Geschiedenis gewist ✓"
+  },
+  "opt_dash_note": {
+    "message": "Deze geschiedenis blijft in de browser. Iedereen die deze computer gebruikt kan haar lezen — wis haar als u het apparaat deelt."
+  },
   "opt_about": {
     "message": "SandBlock is opensource, verzamelt geen gegevens en draait volledig op uw apparaat."
+  },
+  "trouble_cta": {
+    "message": "Pagina werkt niet? Hier uitschakelen"
+  },
+  "zap_tip": {
+    "message": "Een element verbergen"
+  },
+  "zap_banner": {
+    "message": "Klik op een element om het te verbergen"
+  },
+  "zap_esc": {
+    "message": "Esc om te annuleren"
+  },
+  "review_ask": {
+    "message": "Bevalt SandBlock?"
+  },
+  "review_rate": {
+    "message": "Beoordelen"
+  },
+  "review_later": {
+    "message": "Nee, bedankt"
   }
 }

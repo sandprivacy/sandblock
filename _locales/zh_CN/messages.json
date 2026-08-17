@@ -146,7 +146,55 @@
   "opt_stats_reset": {
     "message": "清零计数"
   },
+  "opt_dash": {
+    "message": "拦截历史"
+  },
+  "opt_dash_hint": {
+    "message": "最近 30 天的记录，仅保存在你的设备上，绝不外传。"
+  },
+  "opt_dash_period": {
+    "message": "30 天内已拦截"
+  },
+  "opt_dash_today": {
+    "message": "今天"
+  },
+  "opt_dash_top": {
+    "message": "拦截最多的域名"
+  },
+  "opt_dash_empty": {
+    "message": "尚无记录。浏览一会儿再回来看看。"
+  },
+  "opt_dash_clear": {
+    "message": "清除历史"
+  },
+  "opt_dash_cleared": {
+    "message": "历史已清除 ✓"
+  },
+  "opt_dash_note": {
+    "message": "该历史保存在浏览器中。使用这台电脑的人都能查看，如果设备共用请及时清除。"
+  },
   "opt_about": {
     "message": "SandBlock 是开源软件，不收集任何数据，完全在你的设备上运行。"
+  },
+  "trouble_cta": {
+    "message": "页面出问题？在此关闭"
+  },
+  "zap_tip": {
+    "message": "隐藏元素"
+  },
+  "zap_banner": {
+    "message": "点击要隐藏的元素"
+  },
+  "zap_esc": {
+    "message": "按 Esc 取消"
+  },
+  "review_ask": {
+    "message": "喜欢 SandBlock 吗？"
+  },
+  "review_rate": {
+    "message": "去评分"
+  },
+  "review_later": {
+    "message": "不用了"
   }
 }

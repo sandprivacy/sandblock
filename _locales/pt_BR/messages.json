@@ -146,7 +146,55 @@
   "opt_stats_reset": {
     "message": "Zerar o contador"
   },
+  "opt_dash": {
+    "message": "Histórico de bloqueios"
+  },
+  "opt_dash_hint": {
+    "message": "Os últimos 30 dias, guardados apenas no seu dispositivo. Nada é enviado a lugar algum."
+  },
+  "opt_dash_period": {
+    "message": "bloqueadas em 30 dias"
+  },
+  "opt_dash_today": {
+    "message": "hoje"
+  },
+  "opt_dash_top": {
+    "message": "Domínios mais bloqueados"
+  },
+  "opt_dash_empty": {
+    "message": "Nada registrado ainda. Navegue um pouco e volte."
+  },
+  "opt_dash_clear": {
+    "message": "Limpar o histórico"
+  },
+  "opt_dash_cleared": {
+    "message": "Histórico limpo ✓"
+  },
+  "opt_dash_note": {
+    "message": "Este histórico fica no navegador. Quem usar este computador pode lê-lo: limpe-o se você compartilha a máquina."
+  },
   "opt_about": {
     "message": "O SandBlock é de código aberto, não coleta dados e funciona inteiramente no seu dispositivo."
+  },
+  "trouble_cta": {
+    "message": "Página com problema? Desativar aqui"
+  },
+  "zap_tip": {
+    "message": "Ocultar um elemento"
+  },
+  "zap_banner": {
+    "message": "Clique em um elemento para ocultá-lo"
+  },
+  "zap_esc": {
+    "message": "Esc para cancelar"
+  },
+  "review_ask": {
+    "message": "Está gostando do SandBlock?"
+  },
+  "review_rate": {
+    "message": "Avaliar"
+  },
+  "review_later": {
+    "message": "Não, obrigado"
   }
 }

@@ -146,7 +146,55 @@
   "opt_stats_reset": {
     "message": "Sayacı sıfırla"
   },
+  "opt_dash": {
+    "message": "Engelleme geçmişi"
+  },
+  "opt_dash_hint": {
+    "message": "Son 30 gün, yalnızca cihazınızda saklanır. Hiçbir şey hiçbir yere gönderilmez."
+  },
+  "opt_dash_period": {
+    "message": "30 günde engellenen"
+  },
+  "opt_dash_today": {
+    "message": "bugün"
+  },
+  "opt_dash_top": {
+    "message": "En çok engellenen alan adları"
+  },
+  "opt_dash_empty": {
+    "message": "Henüz kayıt yok. Biraz gezinip geri dönün."
+  },
+  "opt_dash_clear": {
+    "message": "Geçmişi temizle"
+  },
+  "opt_dash_cleared": {
+    "message": "Geçmiş temizlendi ✓"
+  },
+  "opt_dash_note": {
+    "message": "Bu geçmiş tarayıcıda kalır. Bu bilgisayarı kullanan herkes okuyabilir; cihazı paylaşıyorsanız temizleyin."
+  },
   "opt_about": {
     "message": "SandBlock açık kaynaklıdır, veri toplamaz ve tamamen cihazınızda çalışır."
+  },
+  "trouble_cta": {
+    "message": "Sayfa bozuk mu? Burada kapat"
+  },
+  "zap_tip": {
+    "message": "Bir öğeyi gizle"
+  },
+  "zap_banner": {
+    "message": "Gizlemek istediğiniz öğeye tıklayın"
+  },
+  "zap_esc": {
+    "message": "İptal için Esc"
+  },
+  "review_ask": {
+    "message": "SandBlock'u beğendiniz mi?"
+  },
+  "review_rate": {
+    "message": "Değerlendir"
+  },
+  "review_later": {
+    "message": "Hayır, teşekkürler"
   }
 }

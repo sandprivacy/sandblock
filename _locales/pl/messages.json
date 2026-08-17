@@ -146,7 +146,55 @@
   "opt_stats_reset": {
     "message": "Wyzeruj licznik"
   },
+  "opt_dash": {
+    "message": "Historia blokowania"
+  },
+  "opt_dash_hint": {
+    "message": "Ostatnie 30 dni, przechowywane wyłącznie na Twoim urządzeniu. Nic nigdzie nie jest wysyłane."
+  },
+  "opt_dash_period": {
+    "message": "zablokowanych w 30 dni"
+  },
+  "opt_dash_today": {
+    "message": "dzisiaj"
+  },
+  "opt_dash_top": {
+    "message": "Najczęściej blokowane domeny"
+  },
+  "opt_dash_empty": {
+    "message": "Nic jeszcze nie zapisano. Poprzeglądaj chwilę i wróć."
+  },
+  "opt_dash_clear": {
+    "message": "Wyczyść historię"
+  },
+  "opt_dash_cleared": {
+    "message": "Historia wyczyszczona ✓"
+  },
+  "opt_dash_note": {
+    "message": "Ta historia pozostaje w przeglądarce. Każdy, kto używa tego komputera, może ją odczytać — wyczyść ją, jeśli dzielisz urządzenie."
+  },
   "opt_about": {
     "message": "SandBlock jest oprogramowaniem open source, nie zbiera danych i działa w całości na Twoim urządzeniu."
+  },
+  "trouble_cta": {
+    "message": "Strona nie działa? Wyłącz tutaj"
+  },
+  "zap_tip": {
+    "message": "Ukryj element"
+  },
+  "zap_banner": {
+    "message": "Kliknij element, aby go ukryć"
+  },
+  "zap_esc": {
+    "message": "Esc, aby anulować"
+  },
+  "review_ask": {
+    "message": "Podoba Ci się SandBlock?"
+  },
+  "review_rate": {
+    "message": "Oceń"
+  },
+  "review_later": {
+    "message": "Nie, dziękuję"
   }
 }

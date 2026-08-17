@@ -133,6 +133,7 @@ function onBeforeRequest(details) {
   const filter = SB.engine.match(urlLower, hostname, originHostname, typeBit, thirdParty);
   if (filter !== null) {
     state.totalBlocked++;
+    SB.stats.bump(hostname);
     scheduleStatsSave();
     if (details.tabId !== -1) {
       const info = tabInfo.get(details.tabId);
@@ -427,6 +428,12 @@ browser.runtime.onMessage.addListener((msg, sender) => {
       SB.debug.clear();
       return Promise.resolve({ ok: true });
 
+    case 'stats:get':
+      return Promise.resolve(SB.stats.snapshot());
+
+    case 'stats:clear':
+      return SB.stats.clear().then(() => SB.stats.snapshot());
+
     case 'popup:get': {
       const info = msg.tabId !== undefined ? tabInfo.get(msg.tabId) : undefined;
       let hostname = '';
@@ -548,7 +555,17 @@ async function init() {
   }
 
   const stored = await browser.storage.local.get(
-    ['settings', 'user:whitelist', 'stats:total', 'debug:enabled']);
+    ['settings', 'user:whitelist', 'stats:total', 'debug:enabled', 'review:firstRun']);
+
+  // Date de référence de l'invitation à noter. Posée ici plutôt que sur
+  // onInstalled pour que les installations déjà en place en aient une :
+  // elles repartent du jour de la mise à jour, ce qui leur laisse le
+  // même délai qu'aux nouvelles. C'est volontaire — poser la question à
+  // tout le parc le jour d'une mise à jour serait exactement le genre de
+  // sollicitation groupée qui fait désinstaller.
+  if (typeof stored['review:firstRun'] !== 'number') {
+    browser.storage.local.set({ 'review:firstRun': Date.now() }).catch(() => {});
+  }
   if (stored['debug:enabled'] === true) SB.debug.enable(true);
   const settings = stored.settings || {};
   state.enabled = settings.enabled !== false;
@@ -558,6 +575,7 @@ async function init() {
   state.whitelist = new Set(stored['user:whitelist'] || []);
   state.totalBlocked = stored['stats:total'] || 0;
 
+  await SB.stats.init();
   await SB.lists.compileAll();
   state.ready = true;
 

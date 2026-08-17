@@ -146,7 +146,62 @@
   "opt_stats_reset": {
     "message": "Reset counter"
   },
+  "opt_dash": {
+    "message": "Blocking history"
+  },
+  "opt_dash_hint": {
+    "message": "The last 30 days, kept on your device only. Nothing is ever sent anywhere."
+  },
+  "opt_dash_period": {
+    "message": "blocked over 30 days"
+  },
+  "opt_dash_today": {
+    "message": "today"
+  },
+  "opt_dash_top": {
+    "message": "Most blocked domains"
+  },
+  "opt_dash_empty": {
+    "message": "Nothing recorded yet. Browse a little and come back."
+  },
+  "opt_dash_clear": {
+    "message": "Clear history"
+  },
+  "opt_dash_cleared": {
+    "message": "History cleared ✓"
+  },
+  "opt_dash_note": {
+    "message": "This history stays in the browser. Anyone using this computer can read it, so clear it if you share the machine."
+  },
   "opt_about": {
     "message": "SandBlock is open source, collects no data, and runs entirely on your device."
+  },
+  "trouble_cta": {
+    "message": "Page not working? Turn off here",
+    "description": "Popup: escape hatch shown when a site may be broken"
+  },
+  "zap_tip": {
+    "message": "Hide an element",
+    "description": "Popup: title of the element-hiding button"
+  },
+  "zap_banner": {
+    "message": "Click an element to hide it",
+    "description": "Zapper overlay: main instruction"
+  },
+  "zap_esc": {
+    "message": "Esc to cancel",
+    "description": "Zapper overlay: how to quit"
+  },
+  "review_ask": {
+    "message": "Enjoying SandBlock?",
+    "description": "Popup: one-time review invitation"
+  },
+  "review_rate": {
+    "message": "Rate it",
+    "description": "Popup: opens the AMO review page"
+  },
+  "review_later": {
+    "message": "No thanks",
+    "description": "Popup: dismisses the invitation for good"
   }
 }

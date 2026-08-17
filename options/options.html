@@ -69,6 +69,34 @@
     </section>
 
     <section class="card">
+      <div class="card-head">
+        <h2 data-i18n="opt_dash"></h2>
+        <button class="btn ghost" id="dashClear" data-i18n="opt_dash_clear"></button>
+      </div>
+      <p class="row-hint" data-i18n="opt_dash_hint"></p>
+
+      <div class="dash-figures">
+        <div class="dash-figure">
+          <span class="big-number" id="dashPeriod">0</span>
+          <span class="row-hint" data-i18n="opt_dash_period"></span>
+        </div>
+        <div class="dash-figure">
+          <span class="dash-today" id="dashToday">0</span>
+          <span class="row-hint" data-i18n="opt_dash_today"></span>
+        </div>
+        <span class="save-note" id="dashNote"></span>
+      </div>
+
+      <div class="dash-chart" id="dashChart"></div>
+      <p class="dash-empty" id="dashEmpty" data-i18n="opt_dash_empty" hidden></p>
+
+      <h3 class="dash-subtitle" id="dashTopTitle" data-i18n="opt_dash_top"></h3>
+      <div id="dashTop"></div>
+
+      <p class="compile-info" data-i18n="opt_dash_note"></p>
+    </section>
+
+    <section class="card">
       <h2 data-i18n="opt_debug"></h2>
       <div class="row">
         <div class="row-text">

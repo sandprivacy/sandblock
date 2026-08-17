@@ -146,7 +146,55 @@
   "opt_stats_reset": {
     "message": "تصفير العدّاد"
   },
+  "opt_dash": {
+    "message": "سجل الحظر"
+  },
+  "opt_dash_hint": {
+    "message": "آخر 30 يومًا، محفوظة على جهازك وحده. لا يُرسَل أي شيء إلى أي مكان."
+  },
+  "opt_dash_period": {
+    "message": "محظورة خلال 30 يومًا"
+  },
+  "opt_dash_today": {
+    "message": "اليوم"
+  },
+  "opt_dash_top": {
+    "message": "أكثر النطاقات حظرًا"
+  },
+  "opt_dash_empty": {
+    "message": "لا يوجد تسجيل بعد. تصفَّح قليلًا ثم عد."
+  },
+  "opt_dash_clear": {
+    "message": "مسح السجل"
+  },
+  "opt_dash_cleared": {
+    "message": "تم مسح السجل ✓"
+  },
+  "opt_dash_note": {
+    "message": "يبقى هذا السجل في المتصفح. يمكن لأي شخص يستخدم هذا الحاسوب قراءته، فامسحه إن كنت تشارك الجهاز."
+  },
   "opt_about": {
     "message": "‏SandBlock مفتوح المصدر، لا يجمع أي بيانات، ويعمل بالكامل على جهازك."
+  },
+  "trouble_cta": {
+    "message": "الصفحة لا تعمل؟ عطّلها هنا"
+  },
+  "zap_tip": {
+    "message": "إخفاء عنصر"
+  },
+  "zap_banner": {
+    "message": "انقر على عنصر لإخفائه"
+  },
+  "zap_esc": {
+    "message": "Esc للإلغاء"
+  },
+  "review_ask": {
+    "message": "هل يعجبك SandBlock؟"
+  },
+  "review_rate": {
+    "message": "قيّم الإضافة"
+  },
+  "review_later": {
+    "message": "لا، شكرًا"
   }
 }

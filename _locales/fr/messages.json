@@ -146,7 +146,55 @@
   "opt_stats_reset": {
     "message": "Remettre à zéro"
   },
+  "opt_dash": {
+    "message": "Historique des blocages"
+  },
+  "opt_dash_hint": {
+    "message": "Les 30 derniers jours, conservés uniquement sur votre appareil. Rien n'est jamais envoyé nulle part."
+  },
+  "opt_dash_period": {
+    "message": "bloqués sur 30 jours"
+  },
+  "opt_dash_today": {
+    "message": "aujourd'hui"
+  },
+  "opt_dash_top": {
+    "message": "Domaines les plus bloqués"
+  },
+  "opt_dash_empty": {
+    "message": "Rien d'enregistré pour l'instant. Naviguez un peu et revenez."
+  },
+  "opt_dash_clear": {
+    "message": "Effacer l'historique"
+  },
+  "opt_dash_cleared": {
+    "message": "Historique effacé ✓"
+  },
+  "opt_dash_note": {
+    "message": "Cet historique reste dans le navigateur. Toute personne utilisant cet ordinateur peut le lire : effacez-le si vous partagez la machine."
+  },
   "opt_about": {
     "message": "SandBlock est open source, ne collecte aucune donnée et fonctionne entièrement sur votre appareil."
+  },
+  "trouble_cta": {
+    "message": "Page cassée ? Désactiver ici"
+  },
+  "zap_tip": {
+    "message": "Masquer un élément"
+  },
+  "zap_banner": {
+    "message": "Cliquez sur l'élément à masquer"
+  },
+  "zap_esc": {
+    "message": "Échap pour annuler"
+  },
+  "review_ask": {
+    "message": "SandBlock vous plaît ?"
+  },
+  "review_rate": {
+    "message": "Noter"
+  },
+  "review_later": {
+    "message": "Non merci"
   }
 }
