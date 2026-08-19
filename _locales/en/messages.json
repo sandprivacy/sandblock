@@ -203,5 +203,183 @@
   "review_later": {
     "message": "No thanks",
     "description": "Popup: dismisses the invitation for good"
+  },
+  "opt_focus": {
+    "message": "Focus mode",
+    "description": "Options: focus mode card title"
+  },
+  "opt_focus_hint": {
+    "message": "Slows down access to the sites that distract you. Turning the extension off bypasses it — this is a guardrail, not a lock.",
+    "description": "Options: what focus mode does, and what it is not"
+  },
+  "opt_focus_add": {
+    "message": "Add a rule",
+    "description": "Options: creates a new focus rule"
+  },
+  "opt_focus_none": {
+    "message": "No rules yet. Add one to keep a site out of reach during chosen hours.",
+    "description": "Options: shown when no focus rule exists"
+  },
+  "opt_focus_name": {
+    "message": "Name",
+    "description": "Options: focus rule name field"
+  },
+  "opt_focus_sites": {
+    "message": "Sites",
+    "description": "Options: focus rule sites field"
+  },
+  "opt_focus_sites_hint": {
+    "message": "One per line. Subdomains are included.",
+    "description": "Options: how to fill the sites field"
+  },
+  "opt_focus_when": {
+    "message": "When",
+    "description": "Options: schedule section of a focus rule"
+  },
+  "opt_focus_from": {
+    "message": "from",
+    "description": "Options: start of the blocked window"
+  },
+  "opt_focus_to": {
+    "message": "to",
+    "description": "Options: end of the blocked window"
+  },
+  "opt_focus_delete": {
+    "message": "Delete",
+    "description": "Options: deletes a focus rule"
+  },
+  "opt_focus_preset_work": {
+    "message": "Work hours",
+    "description": "Options: preset, Mon-Fri 9am-5pm"
+  },
+  "opt_focus_preset_evening": {
+    "message": "Evening",
+    "description": "Options: preset, every day 6pm-11pm"
+  },
+  "opt_focus_preset_all": {
+    "message": "Always",
+    "description": "Options: preset, every day all day"
+  },
+  "focus_blocked": {
+    "message": "Out of reach",
+    "description": "Blocked page: headline"
+  },
+  "focus_until": {
+    "message": "Available again at $1",
+    "description": "Blocked page: $1 is a formatted time"
+  },
+  "focus_back": {
+    "message": "Go back",
+    "description": "Blocked page: returns to the previous page"
+  },
+  "opt_controls": {
+    "message": "Site controls",
+    "description": "Popup: per-site behaviour controls section"
+  },
+  "ctl_rightclick": {
+    "message": "Allow right-click",
+    "description": "Popup control: neutralise contextmenu blocking"
+  },
+  "ctl_selection": {
+    "message": "Allow selecting and copying",
+    "description": "Popup control: neutralise selection and copy blocking"
+  },
+  "ctl_popups": {
+    "message": "Block pop-up windows",
+    "description": "Popup control: neutralise window.open"
+  },
+  "ctl_webrtc": {
+    "message": "Block WebRTC (IP leak)",
+    "description": "Popup control: disable WebRTC, which can leak the real IP through a VPN"
+  },
+  "ctl_cookies": {
+    "message": "Clear this site's cookies",
+    "description": "Popup control: remove this site cookies on every visit"
+  },
+  "opt_focus_limit": {
+    "message": "Time limit",
+    "description": "Options: minutes of browsing allowed before the rule blocks"
+  },
+  "opt_focus_limit_hint": {
+    "message": "Minutes allowed inside the schedule. 0 blocks the whole time.",
+    "description": "Options: how the time limit interacts with the schedule"
+  },
+  "focus_block_now": {
+    "message": "Block this site now",
+    "description": "Popup: blocks the current site for a chosen duration"
+  },
+  "focus_blocked_until": {
+    "message": "Blocked until $1",
+    "description": "Popup: $1 is a formatted time"
+  },
+  "focus_unblock": {
+    "message": "Unblock",
+    "description": "Popup: lifts an immediate block"
+  },
+  "focus_lockdown": {
+    "message": "Block everything"
+  },
+  "focus_lockdown_hint": {
+    "message": "Suspends every rule at once, whatever their schedule."
+  },
+  "focus_locked_until": {
+    "message": "Everything blocked until $1"
+  },
+  "focus_lift": {
+    "message": "Lift"
+  },
+  "focus_rules": {
+    "message": "Rules"
+  },
+  "focus_subdomains": {
+    "message": "Include subdomains"
+  },
+  "focus_sites_hint": {
+    "message": "One per line. youtube.com/shorts targets a path; +word targets a keyword."
+  },
+  "focus_ranges": {
+    "message": "Time ranges"
+  },
+  "focus_add_range": {
+    "message": "Add a range"
+  },
+  "focus_delay": {
+    "message": "Wait before access (seconds)"
+  },
+  "focus_redirect": {
+    "message": "Redirect to"
+  },
+  "focus_backup": {
+    "message": "Backup"
+  },
+  "focus_backup_hint": {
+    "message": "Export your rules, or paste a backup and import it. Importing replaces everything."
+  },
+  "focus_export": {
+    "message": "Export"
+  },
+  "focus_import": {
+    "message": "Import"
+  },
+  "focus_used": {
+    "message": "$1 used · $2 left"
+  },
+  "focus_open": {
+    "message": "Open focus mode"
+  },
+  "focus_continue": {
+    "message": "Continue"
+  },
+  "focus_wait": {
+    "message": "Available in $1 s"
+  },
+  "focus_profiles": {
+    "message": "Profiles"
+  },
+  "focus_group": {
+    "message": "Profile"
+  },
+  "focus_group_hint": {
+    "message": "Optional. Rules sharing a name can be switched on together from the popup."
   }
 }

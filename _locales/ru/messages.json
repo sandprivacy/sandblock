@@ -196,5 +196,155 @@
   },
   "review_later": {
     "message": "Нет, спасибо"
+  },
+  "opt_focus": {
+    "message": "Режим концентрации"
+  },
+  "opt_focus_hint": {
+    "message": "Замедляет доступ к сайтам, которые вас отвлекают. Отключение расширения обходит его — это ограничитель, а не замок."
+  },
+  "opt_focus_add": {
+    "message": "Добавить правило"
+  },
+  "opt_focus_none": {
+    "message": "Правил пока нет. Добавьте одно, чтобы сайт был недоступен в выбранные часы."
+  },
+  "opt_focus_name": {
+    "message": "Название"
+  },
+  "opt_focus_sites": {
+    "message": "Сайты"
+  },
+  "opt_focus_sites_hint": {
+    "message": "По одному в строке. Поддомены включены."
+  },
+  "opt_focus_when": {
+    "message": "Когда"
+  },
+  "opt_focus_from": {
+    "message": "с"
+  },
+  "opt_focus_to": {
+    "message": "до"
+  },
+  "opt_focus_delete": {
+    "message": "Удалить"
+  },
+  "opt_focus_preset_work": {
+    "message": "Рабочие часы"
+  },
+  "opt_focus_preset_evening": {
+    "message": "Вечер"
+  },
+  "opt_focus_preset_all": {
+    "message": "Всегда"
+  },
+  "focus_blocked": {
+    "message": "Вне доступа"
+  },
+  "focus_until": {
+    "message": "Снова доступно в $1"
+  },
+  "focus_back": {
+    "message": "Назад"
+  },
+  "opt_controls": {
+    "message": "Управление сайтом"
+  },
+  "ctl_rightclick": {
+    "message": "Разблокировать правый клик"
+  },
+  "ctl_selection": {
+    "message": "Разблокировать выделение и копирование"
+  },
+  "ctl_popups": {
+    "message": "Блокировать всплывающие окна"
+  },
+  "ctl_webrtc": {
+    "message": "Блокировать WebRTC (утечка IP)"
+  },
+  "ctl_cookies": {
+    "message": "Удалить куки этого сайта"
+  },
+  "opt_focus_limit": {
+    "message": "Лимит времени"
+  },
+  "opt_focus_limit_hint": {
+    "message": "Минут разрешено внутри интервала. 0 — блокировать всё время."
+  },
+  "focus_block_now": {
+    "message": "Заблокировать этот сайт"
+  },
+  "focus_blocked_until": {
+    "message": "Заблокирован до $1"
+  },
+  "focus_unblock": {
+    "message": "Разблокировать"
+  },
+  "focus_lockdown": {
+    "message": "Заблокировать всё"
+  },
+  "focus_lockdown_hint": {
+    "message": "Приостанавливает все правила сразу, независимо от расписания."
+  },
+  "focus_locked_until": {
+    "message": "Всё заблокировано до $1"
+  },
+  "focus_lift": {
+    "message": "Снять"
+  },
+  "focus_rules": {
+    "message": "Правила"
+  },
+  "focus_subdomains": {
+    "message": "Включать поддомены"
+  },
+  "focus_sites_hint": {
+    "message": "По одному в строке. youtube.com/shorts — путь; +слово — ключевое слово."
+  },
+  "focus_ranges": {
+    "message": "Интервалы времени"
+  },
+  "focus_add_range": {
+    "message": "Добавить интервал"
+  },
+  "focus_delay": {
+    "message": "Ожидание перед доступом (секунды)"
+  },
+  "focus_redirect": {
+    "message": "Перенаправлять на"
+  },
+  "focus_backup": {
+    "message": "Резервная копия"
+  },
+  "focus_backup_hint": {
+    "message": "Экспортируйте правила или вставьте копию и импортируйте. Импорт заменяет всё."
+  },
+  "focus_export": {
+    "message": "Экспорт"
+  },
+  "focus_import": {
+    "message": "Импорт"
+  },
+  "focus_used": {
+    "message": "$1 использовано · $2 осталось"
+  },
+  "focus_open": {
+    "message": "Открыть режим концентрации"
+  },
+  "focus_continue": {
+    "message": "Продолжить"
+  },
+  "focus_wait": {
+    "message": "Доступно через $1 с"
+  },
+  "focus_profiles": {
+    "message": "Профили"
+  },
+  "focus_group": {
+    "message": "Профиль"
+  },
+  "focus_group_hint": {
+    "message": "Необязательно. Правила с одинаковым именем включаются вместе из всплывающего окна."
   }
 }

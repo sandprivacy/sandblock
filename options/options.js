@@ -153,6 +153,7 @@ $('languageSelect').addEventListener('change', async (ev) => {
   renderLists(fresh.lists);
   renderCompileInfo(fresh.info);
   await refreshDashboard();  // nombres et dates du graphique suivent la langue
+  await refreshFocus();      // noms de jours et format d'heure aussi
   await refreshDebug();
 });
 
@@ -286,6 +287,86 @@ $('dashClear').addEventListener('click', async () => {
   note.classList.add('show');
   setTimeout(() => note.classList.remove('show'), 1800);
 });
+
+/* ---------------- mode concentration ---------------- */
+
+/*
+ * Résumé seulement. L'édition vit dans focus/focus.html : avec les plages
+ * multiples, les quotas, les chemins d'URL et l'import/export, l'éditeur
+ * ne tenait plus dans une carte au milieu des autres réglages.
+ */
+
+function h(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className !== undefined) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+/* Noms de jours et heures par Intl : rien à traduire pour ça dans les
+   treize langues, et les conventions locales sont respectées. */
+function dayLabels(style) {
+  const f = new Intl.DateTimeFormat(SBI18N.locale(), { weekday: style });
+  const out = [];
+  // 7 janvier 2024 était un dimanche : getDay() y vaut 0.
+  for (let i = 0; i < 7; i++) out.push(f.format(new Date(2024, 0, 7 + i)));
+  return out;
+}
+
+function fmtMinutes(m) {
+  const d = new Date(2024, 0, 7, Math.floor(m / 60) % 24, m % 60);
+  return new Intl.DateTimeFormat(SBI18N.locale(), {
+    hour: '2-digit', minute: '2-digit',
+  }).format(d);
+}
+
+const siteToText = (s) =>
+  (typeof s === 'string' ? s
+    : (s.kind === 'keyword' ? '+' + s.value : s.value + (s.path || '')));
+
+function focusSummary(rule) {
+  const narrow = dayLabels('narrow');
+  const days = rule.days.length === 7
+    ? narrow.join(' ')
+    : [...rule.days].sort((a, b) => a - b).map((d) => narrow[d]).join(' ');
+  const slots = rule.ranges.map((r) => `${fmtMinutes(r[0])} – ${fmtMinutes(r[1])}`).join(', ');
+  const quota = rule.limitMins > 0 ? ` · ${rule.limitMins} min` : '';
+  // Les sites plutôt qu'un décompte : plus informatif, et ça évite un
+  // « 1 sites » qu'aucune des treize langues ne pardonnerait.
+  return `${days} · ${slots}${quota} · ${(rule.sites || []).map(siteToText).join(', ')}`;
+}
+
+async function refreshFocus() {
+  const res = await browser.runtime.sendMessage({ type: 'focus:get' });
+  const list = $('focusList');
+  list.textContent = '';
+  const locked = (res.locks && res.locks['*'] > Date.now());
+
+  for (const rule of res.rules) {
+    const item = h('div', 'focus-item');
+    const row = h('div', 'focus-summary');
+    const dot = h('span', 'focus-dot');
+    if (rule.open || locked) dot.classList.add('on');
+    const text = h('div', 'focus-text');
+    text.append(
+      h('span', 'focus-name', rule.name !== '' ? rule.name
+        : (rule.sites[0] ? siteToText(rule.sites[0]) : '—')),
+      h('span', 'focus-meta', focusSummary(rule))
+    );
+    row.append(dot, text);
+    item.append(row);
+    list.append(item);
+  }
+  $('focusEmpty').hidden = res.rules.length !== 0;
+}
+
+$('focusOpen').addEventListener('click', () => {
+  // Même onglet : deux onglets pour un seul produit, c est une couture
+  // qu on n a aucune raison de montrer.
+  location.href = browser.runtime.getURL('focus/focus.html');
+});
+
+refreshFocus();
 
 /* ---------------- diagnostic ---------------- */
 

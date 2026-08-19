@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_extName__",
   "short_name": "SandBlock",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "__MSG_extDesc__",
   "default_locale": "en",
   "author": "SandVPN",
@@ -46,6 +46,8 @@
       "js/background/cosmetic.js",
       "js/background/redirects.js",
       "js/background/stats.js",
+      "js/background/focus.js",
+      "js/background/controls.js",
       "js/background/lists.js",
       "js/background/main.js"
     ],

@@ -66,6 +66,19 @@
         </svg>
         <span data-i18n="zap_tip"></span>
       </button>
+      <button class="page-action" id="controlsBtn" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h10M18 7h2M4 17h4M12 17h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="7" r="2.3" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="10" cy="17" r="2.3" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span data-i18n="opt_controls"></span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 10l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="controls-list" id="controlsList" hidden></div>
+
       <button class="page-action warn" id="troubleBtn" hidden>
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 3.6 21.2 19.8H2.8z" fill="none" stroke="currentColor"
@@ -76,6 +89,32 @@
         <span data-i18n="trouble_cta"></span>
       </button>
     </div>
+
+    <!-- Le mode concentration a sa PROPRE carte, titrée. Rangé parmi les
+         actions de page, « bloquer ce site » se lisait comme « bloquer les
+         pubs de ce site » — l'ambiguïté venait du contexte, pas du libellé,
+         et seul un titre pouvait la lever. Repliée, la carte ne coûte
+         qu'une rangée. -->
+    <section class="focus-card" id="focusCard" hidden>
+      <button class="focus-head" id="focusBtn" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 9.5V13l2.4 1.6M9.5 2.6h5" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span data-i18n="opt_focus"></span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 10l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="focus-body" id="focusBody" hidden>
+        <span class="focus-sub" id="focusLabel"></span>
+        <div class="focus-durations" id="focusDurations"></div>
+        <span class="focus-sub" id="profilesLabel" data-i18n="focus_profiles" hidden></span>
+        <div class="focus-durations" id="focusProfiles" hidden></div>
+        <button class="focus-link" id="focusMore" data-i18n="focus_rules"></button>
+      </div>
+    </section>
 
     <section class="stats">
       <div class="stat">

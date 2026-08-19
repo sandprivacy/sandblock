@@ -251,6 +251,150 @@ textarea:focus { border-color: rgba(34, 211, 238, 0.45); }
 }
 .select option:checked { color: var(--accent-1); font-weight: 700; }
 
+/* ---------- navigation ---------- */
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.tab {
+  flex: 1;
+  padding: 9px 14px;
+  border-radius: 9px;
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.18s ease, background 0.18s ease;
+}
+.tab:hover { color: var(--text); background: rgba(255, 255, 255, 0.04); }
+.tab.on {
+  color: #071018;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+}
+
+/* ---------- mode concentration ---------- */
+
+.focus-item {
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.18);
+  margin-top: 10px;
+  overflow: hidden;
+}
+.focus-item.open { border-color: rgba(34, 211, 238, 0.3); }
+
+.focus-summary {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 13px;
+  cursor: pointer;
+}
+.focus-summary:hover { background: rgba(255, 255, 255, 0.025); }
+
+/* Pastille d'état : pleine et lumineuse quand le créneau est ouvert
+   maintenant, creuse sinon. C'est l'information qu'on cherche du regard. */
+.focus-dot {
+  width: 8px;
+  height: 8px;
+  flex: none;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-dim);
+}
+.focus-dot.on {
+  border-color: var(--accent-1);
+  background: var(--accent-1);
+  box-shadow: 0 0 9px rgba(34, 211, 238, 0.75);
+}
+
+.focus-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.focus-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.focus-meta { font-size: 11.5px; color: var(--text-dim); }
+
+.focus-editor {
+  padding: 4px 13px 14px;
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.focus-editor[hidden] { display: none; }
+
+.focus-field { display: flex; flex-direction: column; gap: 6px; }
+.focus-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.focus-input,
+.focus-editor textarea {
+  background: rgba(0, 0, 0, 0.34);
+  border: 1px solid var(--card-border);
+  border-radius: 9px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 11px;
+  outline: none;
+  resize: vertical;
+}
+.focus-input:focus-visible,
+.focus-editor textarea:focus-visible { border-color: rgba(34, 211, 238, 0.5); }
+
+.focus-presets { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* Pastilles de jour : des boutons à deux états plutôt que des cases à
+   cocher — la cible est utilisable au doigt sur Android, ce que des
+   cases natives ne sont pas. */
+.focus-days { display: flex; flex-wrap: wrap; gap: 5px; }
+.focus-day {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--card-border);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+.focus-day:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.2); }
+.focus-day.on {
+  color: #071018;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+}
+
+.focus-times { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.focus-times .focus-input { width: 116px; }
+.focus-sep { font-size: 12.5px; color: var(--text-dim); }
+
+.focus-actions { display: flex; align-items: center; gap: 8px; }
+.focus-actions .btn.danger {
+  margin-left: auto;
+  color: var(--danger, #f87171);
+  border-color: rgba(248, 113, 113, 0.32);
+}
+.focus-actions .btn.danger:hover { background: rgba(248, 113, 113, 0.1); }
+
 /* ---------- tableau de bord ---------- */
 
 .dash-figures {

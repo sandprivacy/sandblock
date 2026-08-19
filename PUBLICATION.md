@@ -12,7 +12,7 @@ signaux d'alerte automatiques chez les relecteurs AMO ; les ignorer
 rallonge la validation de plusieurs semaines. Copier tel quel :
 
 ```
-Content blocker, same architecture as uBlock Origin (GPL-3.0). Three points
+Content blocker, same architecture as uBlock Origin (GPL-3.0). Four points
 usually raise questions:
 
 1. FILTER LISTS ARE DATA, NOT CODE. Lists fetched at runtime (EasyList,
@@ -31,11 +31,29 @@ See buildCode(). Page-world execution is required, not a convenience:
 patching setTimeout or appendChild across the Xray boundary stops large
 sites from loading at all.
 
-3. ELEMENT ZAPPER — js/content/zapper.js, injected only when the user
-clicks the button in the popup, never automatically. It draws a highlight
-in a closed shadow root and sets display:none on the clicked element for
-the current page view only. It writes nothing, generates no selector, and
-persists nothing.
+3. USER-DRIVEN PAGE TOOLS — two features, both user-initiated only.
+js/content/zapper.js is injected when the user clicks the popup button,
+never automatically; it highlights inside a closed shadow root and sets
+display:none on the clicked element for that page view only, writing
+nothing. js/background/controls.js exposes five per-site toggles (allow
+right-click, allow selection/copy, block pop-ups, block WebRTC, clear
+cookies). Each maps to scriptlets ALREADY bundled and described in point 2
+— it adds no new capability, it only makes existing ones reachable without
+hand-writing "site##+js(nowoif)" in a text box. State is per hostname in
+storage.local.
+
+4. FOCUS MODE — js/background/focus.js. User-defined rules make chosen
+sites unreachable on a schedule, after a per-day minute quota, or on
+demand from the popup. Time is counted from tab/window focus transitions
+only, with one timer; no polling and no idle permission. On main_frame
+only, it cancels the request and calls tabs.update() to an internal page
+(focus/blocked.html). tabs.update rather than a webRequest redirect on
+purpose: redirecting to a moz-extension: URL would require declaring that
+page web-accessible, which would let any site frame it. If the rule sets a
+delay, that page shows a countdown and only then offers to continue. Rules,
+usage counters and locks live in storage.local and are never sent
+anywhere. The whole call sits in a try/catch that FAILS OPEN, so a fault
+there can never break browsing.
 
 No eval(), no new Function(), no remote code. No data collection: no
 analytics, no telemetry, all state in storage.local. The one-time review
@@ -104,29 +122,6 @@ which lists to use. Available in 13 languages.
 **Description** — version française :
 
 ```
-SandBlock bloque les publicités et les traqueurs avant même leur requête.
-
-POURQUOI C'EST RAPIDE
-Le moteur de filtrage indexe chaque filtre sous son token le plus
-discriminant : sur plus de 120 000 filtres, seule une poignée est évaluée
-à chaque requête. Latence moyenne : ~11 microsecondes.
-
-CE QUI EST BLOQUÉ
-• Requêtes publicitaires et de pistage (EasyList, EasyPrivacy, uAssets, Liste FR)
-• Emplacements publicitaires, par masquage CSS
-• Publicités vidéo YouTube, via des scriptlets qui purgent les métadonnées
-  de pub du lecteur
-• Paramètres de pistage dans les URLs (fbclid, gclid, utm_*, et 120 autres)
-
-CONÇU POUR NE PAS CASSER LES SITES
-Les règles cosmétiques sont validées avant usage : tout sélecteur capable
-d'atteindre la racine du document ou de viser des éléments arbitraires est
-rejeté. Les règles génériques sont servies à la demande, selon les classes
-réellement présentes dans la page.
-
-CONFIDENTIALITÉ
-Aucun compte, aucune analyse d'audience, aucune télémétrie, aucune collecte
-de données. Tout fonctionne localement. Open source.
 SandBlock bloque les publicités et les traqueurs avant même leur requête.
 
 POURQUOI C'EST RAPIDE

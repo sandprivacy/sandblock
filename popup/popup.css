@@ -328,6 +328,166 @@ body.off .stat-value {
   background: rgba(248, 113, 113, 0.08);
 }
 
+/* ---------- débrider ce site ---------- */
+
+.page-action .chev {
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+.page-action[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.page-action[aria-expanded="true"] {
+  border-color: rgba(34, 211, 238, 0.4);
+  color: var(--text);
+}
+
+.controls-list {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 12px 4px;
+  border: 1px solid var(--card-border);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  background: rgba(0, 0, 0, 0.22);
+  margin-top: -7px;
+}
+.controls-list[hidden] { display: none; }
+
+.ctl-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 0;
+}
+.ctl-row + .ctl-row { border-top: 1px solid rgba(255, 255, 255, 0.05); }
+
+/* Les libellés sont longs dans plusieurs langues (allemand, turc) : on
+   les laisse passer à la ligne plutôt que de les tronquer — un libellé
+   coupé fait perdre le sens de l interrupteur. */
+.ctl-label {
+  font-size: 11.5px;
+  color: var(--text-dim);
+  line-height: 1.35;
+}
+.ctl-row input:checked ~ .ctl-label,
+.ctl-row.on .ctl-label { color: var(--text); }
+
+/* ---------- mode concentration ---------- */
+
+.focus-card {
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.focus-card[hidden] { display: none; }
+
+.focus-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 11px 13px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+.focus-head:hover { background: rgba(255, 255, 255, 0.03); }
+.focus-head svg { width: 16px; height: 16px; flex: none; color: var(--text-dim); }
+.focus-head .chev { margin-left: auto; transition: transform 0.2s ease; }
+.focus-head[aria-expanded="true"] .chev { transform: rotate(180deg); }
+
+.focus-body {
+  padding: 2px 13px 12px;
+  border-top: 1px solid var(--card-border);
+}
+.focus-body[hidden] { display: none; }
+
+.focus-sub {
+  display: block;
+  margin: 10px 0 7px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.focus-sub[hidden] { display: none; }
+
+.focus-link {
+  display: block;
+  width: 100%;
+  margin-top: 11px;
+  padding: 7px;
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 11.5px;
+  cursor: pointer;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.focus-link:hover { color: var(--text); border-color: rgba(34, 211, 238, 0.45); }
+
+/* ---------- durées et profils ---------- */
+
+.focus-durations { display: flex; flex-wrap: wrap; gap: 6px; }
+.focus-durations[hidden] { display: none; }
+
+/* Profils : le nom à gauche, ses durées à droite, une ligne par profil. */
+#focusProfiles { flex-direction: column; gap: 6px; }
+
+.profile-row { display: flex; align-items: center; gap: 6px; }
+.profile-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profile-row .dur { flex: 0 0 auto; min-width: 44px; }
+
+.dur {
+  flex: 1;
+  padding: 8px 4px;
+  border: 1px solid var(--card-border);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+.dur:hover {
+  color: #071018;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+}
+
+/* Un site ou un profil déjà coupé : la pastille devient rouge et lève. */
+.dur.on {
+  color: var(--text);
+  border-color: rgba(248, 113, 113, 0.45);
+  background: rgba(248, 113, 113, 0.1);
+}
+.dur.on:hover {
+  color: #071018;
+  background: linear-gradient(135deg, #f87171, #fb923c);
+  border-color: transparent;
+}
+
 /* ---------- invitation à noter ---------- */
 
 .review {

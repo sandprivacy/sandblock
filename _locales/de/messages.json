@@ -196,5 +196,155 @@
   },
   "review_later": {
     "message": "Nein danke"
+  },
+  "opt_focus": {
+    "message": "Fokus-Modus"
+  },
+  "opt_focus_hint": {
+    "message": "Verlangsamt den Zugriff auf Websites, die Sie ablenken. Das Deaktivieren der Erweiterung umgeht ihn — es ist eine Leitplanke, kein Schloss."
+  },
+  "opt_focus_add": {
+    "message": "Regel hinzufügen"
+  },
+  "opt_focus_none": {
+    "message": "Noch keine Regeln. Fügen Sie eine hinzu, um eine Website zu bestimmten Zeiten außer Reichweite zu halten."
+  },
+  "opt_focus_name": {
+    "message": "Name"
+  },
+  "opt_focus_sites": {
+    "message": "Websites"
+  },
+  "opt_focus_sites_hint": {
+    "message": "Eine pro Zeile. Subdomains eingeschlossen."
+  },
+  "opt_focus_when": {
+    "message": "Wann"
+  },
+  "opt_focus_from": {
+    "message": "von"
+  },
+  "opt_focus_to": {
+    "message": "bis"
+  },
+  "opt_focus_delete": {
+    "message": "Löschen"
+  },
+  "opt_focus_preset_work": {
+    "message": "Bürozeiten"
+  },
+  "opt_focus_preset_evening": {
+    "message": "Abend"
+  },
+  "opt_focus_preset_all": {
+    "message": "Immer"
+  },
+  "focus_blocked": {
+    "message": "Außer Reichweite"
+  },
+  "focus_until": {
+    "message": "Wieder verfügbar um $1"
+  },
+  "focus_back": {
+    "message": "Zurück"
+  },
+  "opt_controls": {
+    "message": "Website-Kontrollen"
+  },
+  "ctl_rightclick": {
+    "message": "Rechtsklick freigeben"
+  },
+  "ctl_selection": {
+    "message": "Markieren und Kopieren freigeben"
+  },
+  "ctl_popups": {
+    "message": "Pop-up-Fenster blockieren"
+  },
+  "ctl_webrtc": {
+    "message": "WebRTC blockieren (IP-Leck)"
+  },
+  "ctl_cookies": {
+    "message": "Cookies dieser Website löschen"
+  },
+  "opt_focus_limit": {
+    "message": "Zeitlimit"
+  },
+  "opt_focus_limit_hint": {
+    "message": "Erlaubte Minuten innerhalb des Zeitfensters. 0 blockiert durchgehend."
+  },
+  "focus_block_now": {
+    "message": "Diese Website jetzt sperren"
+  },
+  "focus_blocked_until": {
+    "message": "Gesperrt bis $1"
+  },
+  "focus_unblock": {
+    "message": "Entsperren"
+  },
+  "focus_lockdown": {
+    "message": "Alles sperren"
+  },
+  "focus_lockdown_hint": {
+    "message": "Setzt alle Regeln auf einmal aus, unabhängig von ihrem Zeitplan."
+  },
+  "focus_locked_until": {
+    "message": "Alles gesperrt bis $1"
+  },
+  "focus_lift": {
+    "message": "Aufheben"
+  },
+  "focus_rules": {
+    "message": "Regeln"
+  },
+  "focus_subdomains": {
+    "message": "Subdomains einbeziehen"
+  },
+  "focus_sites_hint": {
+    "message": "Eine pro Zeile. youtube.com/shorts trifft einen Pfad; +Wort ein Stichwort."
+  },
+  "focus_ranges": {
+    "message": "Zeitfenster"
+  },
+  "focus_add_range": {
+    "message": "Zeitfenster hinzufügen"
+  },
+  "focus_delay": {
+    "message": "Wartezeit vor Zugriff (Sekunden)"
+  },
+  "focus_redirect": {
+    "message": "Weiterleiten zu"
+  },
+  "focus_backup": {
+    "message": "Sicherung"
+  },
+  "focus_backup_hint": {
+    "message": "Regeln exportieren oder eine Sicherung einfügen und importieren. Der Import ersetzt alles."
+  },
+  "focus_export": {
+    "message": "Exportieren"
+  },
+  "focus_import": {
+    "message": "Importieren"
+  },
+  "focus_used": {
+    "message": "$1 verbraucht · $2 übrig"
+  },
+  "focus_open": {
+    "message": "Fokus-Modus öffnen"
+  },
+  "focus_continue": {
+    "message": "Weiter"
+  },
+  "focus_wait": {
+    "message": "Verfügbar in $1 s"
+  },
+  "focus_profiles": {
+    "message": "Profile"
+  },
+  "focus_group": {
+    "message": "Profil"
+  },
+  "focus_group_hint": {
+    "message": "Optional. Regeln mit demselben Namen lassen sich gemeinsam aus dem Popup aktivieren."
   }
 }

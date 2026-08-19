@@ -196,5 +196,155 @@
   },
   "review_later": {
     "message": "今はしない"
+  },
+  "opt_focus": {
+    "message": "集中モード"
+  },
+  "opt_focus_hint": {
+    "message": "気が散るサイトへのアクセスを遅らせます。拡張機能をオフにすれば回避できます — 鍵ではなく、ガードレールです。"
+  },
+  "opt_focus_add": {
+    "message": "ルールを追加"
+  },
+  "opt_focus_none": {
+    "message": "まだルールがありません。追加すると、指定した時間帯にサイトへアクセスできなくなります。"
+  },
+  "opt_focus_name": {
+    "message": "名前"
+  },
+  "opt_focus_sites": {
+    "message": "サイト"
+  },
+  "opt_focus_sites_hint": {
+    "message": "1行に1つ。サブドメインも含まれます。"
+  },
+  "opt_focus_when": {
+    "message": "時間帯"
+  },
+  "opt_focus_from": {
+    "message": "開始"
+  },
+  "opt_focus_to": {
+    "message": "終了"
+  },
+  "opt_focus_delete": {
+    "message": "削除"
+  },
+  "opt_focus_preset_work": {
+    "message": "勤務時間"
+  },
+  "opt_focus_preset_evening": {
+    "message": "夜"
+  },
+  "opt_focus_preset_all": {
+    "message": "常時"
+  },
+  "focus_blocked": {
+    "message": "アクセスできません"
+  },
+  "focus_until": {
+    "message": "$1 に再び利用できます"
+  },
+  "focus_back": {
+    "message": "戻る"
+  },
+  "opt_controls": {
+    "message": "サイトの制御"
+  },
+  "ctl_rightclick": {
+    "message": "右クリックを解除"
+  },
+  "ctl_selection": {
+    "message": "選択とコピーを解除"
+  },
+  "ctl_popups": {
+    "message": "ポップアップをブロック"
+  },
+  "ctl_webrtc": {
+    "message": "WebRTC をブロック（IP 漏えい）"
+  },
+  "ctl_cookies": {
+    "message": "このサイトの Cookie を削除"
+  },
+  "opt_focus_limit": {
+    "message": "時間制限"
+  },
+  "opt_focus_limit_hint": {
+    "message": "時間帯の中で使える分数。0 なら全時間ブロック。"
+  },
+  "focus_block_now": {
+    "message": "このサイトを今すぐブロック"
+  },
+  "focus_blocked_until": {
+    "message": "$1 までブロック中"
+  },
+  "focus_unblock": {
+    "message": "ブロック解除"
+  },
+  "focus_lockdown": {
+    "message": "すべてブロック"
+  },
+  "focus_lockdown_hint": {
+    "message": "時間帯にかかわらず、すべてのルールを一括で停止します。"
+  },
+  "focus_locked_until": {
+    "message": "$1 まで全面ブロック中"
+  },
+  "focus_lift": {
+    "message": "解除"
+  },
+  "focus_rules": {
+    "message": "ルール"
+  },
+  "focus_subdomains": {
+    "message": "サブドメインを含める"
+  },
+  "focus_sites_hint": {
+    "message": "1行に1つ。youtube.com/shorts はパス、+単語 はキーワードを指します。"
+  },
+  "focus_ranges": {
+    "message": "時間帯"
+  },
+  "focus_add_range": {
+    "message": "時間帯を追加"
+  },
+  "focus_delay": {
+    "message": "アクセス前の待機（秒）"
+  },
+  "focus_redirect": {
+    "message": "リダイレクト先"
+  },
+  "focus_backup": {
+    "message": "バックアップ"
+  },
+  "focus_backup_hint": {
+    "message": "ルールを書き出すか、バックアップを貼り付けて読み込みます。読み込みはすべて置き換えます。"
+  },
+  "focus_export": {
+    "message": "書き出し"
+  },
+  "focus_import": {
+    "message": "読み込み"
+  },
+  "focus_used": {
+    "message": "$1 使用 · 残り $2"
+  },
+  "focus_open": {
+    "message": "集中モードを開く"
+  },
+  "focus_continue": {
+    "message": "続ける"
+  },
+  "focus_wait": {
+    "message": "$1 秒後に利用可能"
+  },
+  "focus_profiles": {
+    "message": "プロファイル"
+  },
+  "focus_group": {
+    "message": "プロファイル"
+  },
+  "focus_group_hint": {
+    "message": "任意。同じ名前のルールはポップアップから一括で有効にできます。"
   }
 }

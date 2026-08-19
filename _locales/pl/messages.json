@@ -196,5 +196,155 @@
   },
   "review_later": {
     "message": "Nie, dziękuję"
+  },
+  "opt_focus": {
+    "message": "Tryb skupienia"
+  },
+  "opt_focus_hint": {
+    "message": "Spowalnia dostęp do stron, które rozpraszają. Wyłączenie rozszerzenia to omija — to barierka, nie zamek."
+  },
+  "opt_focus_add": {
+    "message": "Dodaj regułę"
+  },
+  "opt_focus_none": {
+    "message": "Brak reguł. Dodaj jedną, aby strona była niedostępna w wybranych godzinach."
+  },
+  "opt_focus_name": {
+    "message": "Nazwa"
+  },
+  "opt_focus_sites": {
+    "message": "Strony"
+  },
+  "opt_focus_sites_hint": {
+    "message": "Jedna na wiersz. Subdomeny są uwzględnione."
+  },
+  "opt_focus_when": {
+    "message": "Kiedy"
+  },
+  "opt_focus_from": {
+    "message": "od"
+  },
+  "opt_focus_to": {
+    "message": "do"
+  },
+  "opt_focus_delete": {
+    "message": "Usuń"
+  },
+  "opt_focus_preset_work": {
+    "message": "Godziny pracy"
+  },
+  "opt_focus_preset_evening": {
+    "message": "Wieczór"
+  },
+  "opt_focus_preset_all": {
+    "message": "Zawsze"
+  },
+  "focus_blocked": {
+    "message": "Poza zasięgiem"
+  },
+  "focus_until": {
+    "message": "Znów dostępne o $1"
+  },
+  "focus_back": {
+    "message": "Wróć"
+  },
+  "opt_controls": {
+    "message": "Kontrola witryny"
+  },
+  "ctl_rightclick": {
+    "message": "Odblokuj prawy przycisk myszy"
+  },
+  "ctl_selection": {
+    "message": "Odblokuj zaznaczanie i kopiowanie"
+  },
+  "ctl_popups": {
+    "message": "Blokuj wyskakujące okna"
+  },
+  "ctl_webrtc": {
+    "message": "Blokuj WebRTC (wyciek IP)"
+  },
+  "ctl_cookies": {
+    "message": "Usuń ciasteczka tej witryny"
+  },
+  "opt_focus_limit": {
+    "message": "Limit czasu"
+  },
+  "opt_focus_limit_hint": {
+    "message": "Minuty dozwolone w przedziale. 0 blokuje przez cały czas."
+  },
+  "focus_block_now": {
+    "message": "Zablokuj tę stronę teraz"
+  },
+  "focus_blocked_until": {
+    "message": "Zablokowana do $1"
+  },
+  "focus_unblock": {
+    "message": "Odblokuj"
+  },
+  "focus_lockdown": {
+    "message": "Zablokuj wszystko"
+  },
+  "focus_lockdown_hint": {
+    "message": "Zawiesza wszystkie reguły naraz, niezależnie od harmonogramu."
+  },
+  "focus_locked_until": {
+    "message": "Wszystko zablokowane do $1"
+  },
+  "focus_lift": {
+    "message": "Zdejmij"
+  },
+  "focus_rules": {
+    "message": "Reguły"
+  },
+  "focus_subdomains": {
+    "message": "Uwzględnij subdomeny"
+  },
+  "focus_sites_hint": {
+    "message": "Jedna na wiersz. youtube.com/shorts celuje w ścieżkę; +słowo w słowo kluczowe."
+  },
+  "focus_ranges": {
+    "message": "Przedziały czasu"
+  },
+  "focus_add_range": {
+    "message": "Dodaj przedział"
+  },
+  "focus_delay": {
+    "message": "Oczekiwanie przed dostępem (sekundy)"
+  },
+  "focus_redirect": {
+    "message": "Przekieruj do"
+  },
+  "focus_backup": {
+    "message": "Kopia zapasowa"
+  },
+  "focus_backup_hint": {
+    "message": "Wyeksportuj reguły lub wklej kopię i zaimportuj. Import zastępuje wszystko."
+  },
+  "focus_export": {
+    "message": "Eksportuj"
+  },
+  "focus_import": {
+    "message": "Importuj"
+  },
+  "focus_used": {
+    "message": "$1 zużyte · $2 pozostało"
+  },
+  "focus_open": {
+    "message": "Otwórz tryb skupienia"
+  },
+  "focus_continue": {
+    "message": "Kontynuuj"
+  },
+  "focus_wait": {
+    "message": "Dostępne za $1 s"
+  },
+  "focus_profiles": {
+    "message": "Profile"
+  },
+  "focus_group": {
+    "message": "Profil"
+  },
+  "focus_group_hint": {
+    "message": "Opcjonalne. Reguły o tej samej nazwie włączają się razem z okienka."
   }
 }

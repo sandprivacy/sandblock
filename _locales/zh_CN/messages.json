@@ -196,5 +196,155 @@
   },
   "review_later": {
     "message": "不用了"
+  },
+  "opt_focus": {
+    "message": "专注模式"
+  },
+  "opt_focus_hint": {
+    "message": "延缓访问那些让你分心的网站。关闭扩展即可绕过——这是护栏，不是锁。"
+  },
+  "opt_focus_add": {
+    "message": "添加规则"
+  },
+  "opt_focus_none": {
+    "message": "还没有规则。添加一条，让某个网站在指定时段内无法访问。"
+  },
+  "opt_focus_name": {
+    "message": "名称"
+  },
+  "opt_focus_sites": {
+    "message": "网站"
+  },
+  "opt_focus_sites_hint": {
+    "message": "每行一个，包含子域名。"
+  },
+  "opt_focus_when": {
+    "message": "时间"
+  },
+  "opt_focus_from": {
+    "message": "从"
+  },
+  "opt_focus_to": {
+    "message": "到"
+  },
+  "opt_focus_delete": {
+    "message": "删除"
+  },
+  "opt_focus_preset_work": {
+    "message": "工作时间"
+  },
+  "opt_focus_preset_evening": {
+    "message": "晚间"
+  },
+  "opt_focus_preset_all": {
+    "message": "全天"
+  },
+  "focus_blocked": {
+    "message": "暂不可访问"
+  },
+  "focus_until": {
+    "message": "将于 $1 恢复访问"
+  },
+  "focus_back": {
+    "message": "返回"
+  },
+  "opt_controls": {
+    "message": "站点控制"
+  },
+  "ctl_rightclick": {
+    "message": "解除右键限制"
+  },
+  "ctl_selection": {
+    "message": "解除选择和复制限制"
+  },
+  "ctl_popups": {
+    "message": "拦截弹出窗口"
+  },
+  "ctl_webrtc": {
+    "message": "拦截 WebRTC（IP 泄露）"
+  },
+  "ctl_cookies": {
+    "message": "清除此站点的 Cookie"
+  },
+  "opt_focus_limit": {
+    "message": "时间限制"
+  },
+  "opt_focus_limit_hint": {
+    "message": "时段内允许的分钟数。0 表示全程拦截。"
+  },
+  "focus_block_now": {
+    "message": "立即拦截此站点"
+  },
+  "focus_blocked_until": {
+    "message": "拦截至 $1"
+  },
+  "focus_unblock": {
+    "message": "解除拦截"
+  },
+  "focus_lockdown": {
+    "message": "全部拦截"
+  },
+  "focus_lockdown_hint": {
+    "message": "一次性暂停所有规则，无论其时段设置。"
+  },
+  "focus_locked_until": {
+    "message": "全部拦截至 $1"
+  },
+  "focus_lift": {
+    "message": "解除"
+  },
+  "focus_rules": {
+    "message": "规则"
+  },
+  "focus_subdomains": {
+    "message": "包含子域名"
+  },
+  "focus_sites_hint": {
+    "message": "每行一个。youtube.com/shorts 匹配路径；+关键词 匹配关键词。"
+  },
+  "focus_ranges": {
+    "message": "时间段"
+  },
+  "focus_add_range": {
+    "message": "添加时间段"
+  },
+  "focus_delay": {
+    "message": "访问前等待（秒）"
+  },
+  "focus_redirect": {
+    "message": "跳转到"
+  },
+  "focus_backup": {
+    "message": "备份"
+  },
+  "focus_backup_hint": {
+    "message": "导出规则，或粘贴备份后导入。导入会替换全部内容。"
+  },
+  "focus_export": {
+    "message": "导出"
+  },
+  "focus_import": {
+    "message": "导入"
+  },
+  "focus_used": {
+    "message": "已用 $1 · 剩余 $2"
+  },
+  "focus_open": {
+    "message": "打开专注模式"
+  },
+  "focus_continue": {
+    "message": "继续"
+  },
+  "focus_wait": {
+    "message": "$1 秒后可用"
+  },
+  "focus_profiles": {
+    "message": "配置"
+  },
+  "focus_group": {
+    "message": "配置名"
+  },
+  "focus_group_hint": {
+    "message": "可选。同名规则可在弹出窗口中一起启用。"
   }
 }

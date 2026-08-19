@@ -1284,15 +1284,29 @@ function setDebug(on) {
   codeCache.clear(); // le code injecté diffère selon le mode
 }
 
-function codeForHostname(hostname) {
-  const cached = codeCache.get(hostname);
+/**
+ * @param {string} hostname
+ * @param {boolean} withLists  false quand le blocage est coupé sur ce
+ *   site : seules les bascules explicites de l utilisateur s appliquent.
+ *
+ * Les deux sources sont fusionnées en UN seul code. Elles ne peuvent pas
+ * etre injectees separement : l enveloppe pose un garde
+ * `self.__sandblockInjected` et une seconde injection dans le meme monde
+ * isole ne ferait rien.
+ */
+function codeForHostname(hostname, withLists) {
+  const key = withLists === false ? "!" + hostname : hostname;
+  const cached = codeCache.get(key);
   if (cached !== undefined) return cached;
-  const entries = SB.cosmetic.scriptletsFor(hostname);
+
+  const entries = withLists === false ? [] : SB.cosmetic.scriptletsFor(hostname).slice();
+  if (SB.controls !== undefined) entries.push(...SB.controls.entriesFor(hostname));
+
   const code = entries.length !== 0 ? buildCode(entries, debugMode) : null;
   if (codeCache.size >= 200) {
     codeCache.delete(codeCache.keys().next().value);
   }
-  codeCache.set(hostname, code);
+  codeCache.set(key, code);
   return code;
 }
 

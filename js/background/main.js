@@ -103,14 +103,33 @@ function originHostnameOf(originUrl) {
 }
 
 function onBeforeRequest(details) {
-  if (!state.enabled) return;
-
   const url = details.url;
   const c0 = url.charCodeAt(0);
   if (c0 !== 0x68 && c0 !== 0x77) return; // http(s) / ws(s) uniquement
 
   const typeBit = WEBREQUEST_TYPE_MAP[details.type] || TYPE_BITS.other;
   const urlLower = url.toLowerCase();
+
+  /*
+   * Mode concentration. Placé avant le test `enabled` et avant la liste
+   * blanche, délibérément : couper la protection ou déclarer un site de
+   * confiance ne doit pas rouvrir un site qu'on s'est soi-même interdit.
+   * Ce sont deux réglages qui ne parlent pas de la même chose.
+   *
+   * Enveloppé, et il ÉCHOUE EN LAISSANT PASSER. Un défaut ici couperait
+   * toute la navigation : une fonction de confort ne doit jamais pouvoir
+   * rendre le navigateur inutilisable. Le coût sur les sous-ressources
+   * est nul — la condition sur main_frame est déjà calculée.
+   */
+  if (typeBit === TYPE_BITS.main_frame) {
+    try {
+      const verdict = SB.focus.check(urlLower, details.tabId, url);
+      if (verdict !== null) return verdict;
+    } catch (_) {}
+  }
+
+  if (!state.enabled) return;
+
   const hostname = hostnameFromUrl(urlLower);
 
   let originHostname;
@@ -289,20 +308,55 @@ browser.webRequest.onHeadersReceived.addListener(
  * content-script (wrappedJSObject/exportFunction — insensible à la CSP
  * de la page), via tabs.executeScript à document_start. */
 browser.webNavigation.onCommitted.addListener((details) => {
-  if (!state.enabled || !state.scriptlets) return;
   if (!/^https?:/.test(details.url)) return;
   const hostname = hostnameFromUrl(details.url.toLowerCase());
-  if (isWhitelisted(hostname)) return;
-  const code = SB.scriptlets.codeForHostname(hostname);
-  if (code === null) return;
-  browser.tabs.executeScript(details.tabId, {
-    frameId: details.frameId,
-    code,
-    runAt: 'document_start',
-    matchAboutBlank: true,
-  }).catch((err) => {
-    SB.debug.log('error', { where: 'executeScript', message: String(err && err.message || err) });
-  });
+
+  /*
+   * Les bascules « Débrider ce site » sont des préférences explicites de
+   * l utilisateur sur ce site : couper la protection ou déclarer le site
+   * de confiance ne doit pas les annuler. « Je veux pouvoir copier le
+   * texte ici » ne parle pas de publicité.
+   *
+   * Les deux sources sont donc fusionnées en un seul code par
+   * codeForHostname : l enveloppe pose un garde global, une seconde
+   * injection dans le même monde isolé ne ferait rien.
+   */
+  const withLists = state.enabled && state.scriptlets && !isWhitelisted(hostname);
+  const code = SB.scriptlets.codeForHostname(hostname, withLists);
+  if (code !== null) {
+    browser.tabs.executeScript(details.tabId, {
+      frameId: details.frameId,
+      code,
+      runAt: 'document_start',
+      matchAboutBlank: true,
+    }).catch((err) => {
+      SB.debug.log('error', { where: 'executeScript', message: String(err && err.message || err) });
+    });
+  }
+
+  // Le mode concentration compte le temps passé sur un site à quota. Une
+  // navigation est une transition : sans ça, passer de reddit.com à un
+  // autre site continuerait à consommer le quota.
+  //
+  // On passe par refreshActivity, qui interroge l'onglet réellement
+  // actif : une navigation dans un onglet d'ARRIÈRE-PLAN ne doit pas
+  // faire basculer le comptage sur elle.
+  if (details.frameId === 0) {
+    try { SB.focus.refreshActivity(); } catch (_) {}
+  }
+
+  // Certaines entraves ne passent pas par JavaScript : empêcher la
+  // sélection de texte se fait le plus souvent en CSS, qu aucun
+  // scriptlet ne peut défaire.
+  const css = SB.controls.cssFor(hostname);
+  if (css !== '') {
+    browser.tabs.insertCSS(details.tabId, {
+      frameId: details.frameId,
+      code: css,
+      cssOrigin: 'user',
+      runAt: 'document_start',
+    }).catch(() => {});
+  }
 });
 
 browser.tabs.onRemoved.addListener((tabId) => {
@@ -428,6 +482,68 @@ browser.runtime.onMessage.addListener((msg, sender) => {
       SB.debug.clear();
       return Promise.resolve({ ok: true });
 
+    case 'controls:get':
+      return Promise.resolve({
+        ids: SB.controls.ids(),
+        state: SB.controls.forHost(String(msg.hostname || '')),
+        inherited: SB.controls.inheritedFrom(String(msg.hostname || '')),
+      });
+
+    case 'controls:set':
+      return SB.controls
+        .setForHost(String(msg.hostname || ''), String(msg.id || ''), msg.on === true)
+        .then((s) => ({ state: s }));
+
+    case 'focus:get':
+      return Promise.resolve({ rules: SB.focus.getRules(), locks: SB.focus.locks() });
+
+    case 'focus:set':
+      return SB.focus.setRules(msg.rules).then((rules) => {
+        // Enregistrer une règle dont la plage est déjà ouverte doit
+        // fermer les onglets concernés tout de suite ; sinon on croit
+        // que la règle ne marche pas.
+        SB.focus.sweep().catch(() => {});
+        return { rules, locks: SB.focus.locks() };
+      });
+
+    case 'focus:lock':
+      return SB.focus.lock(String(msg.id || '*'), msg.minutes)
+        .then((locks) => ({ locks, rules: SB.focus.getRules() }));
+
+    case 'focus:unlock':
+      return SB.focus.unlock(String(msg.id || '*'))
+        .then((locks) => ({ locks, rules: SB.focus.getRules() }));
+
+    case 'focus:blockNow':
+      return SB.focus.blockNow(String(msg.hostname || ''), msg.minutes)
+        .then((temp) => ({ temp, until: SB.focus.tempFor(String(msg.hostname || '')) }));
+
+    case 'focus:unblockNow':
+      return SB.focus.unblockNow(String(msg.hostname || ''))
+        .then((temp) => ({ temp, until: 0 }));
+
+    // Accordé par la page d'attente une fois le compte à rebours écoulé.
+    case 'focus:grant':
+      return SB.focus.grant(String(msg.hostname || ''), msg.minutes)
+        .then((until) => ({ until }));
+
+    case 'focus:groups':
+      return Promise.resolve({ groups: SB.focus.groups() });
+
+    case 'focus:lockGroup':
+      return SB.focus.lockGroup(String(msg.group || ''), msg.minutes)
+        .then((groups) => ({ groups }));
+
+    case 'focus:unlockGroup':
+      return SB.focus.unlockGroup(String(msg.group || ''))
+        .then((groups) => ({ groups }));
+
+    case 'focus:export':
+      return Promise.resolve({ rules: SB.focus.exportRules() });
+
+    case 'focus:clearUsage':
+      return SB.focus.clearUsage().then(() => ({ rules: SB.focus.getRules() }));
+
     case 'stats:get':
       return Promise.resolve(SB.stats.snapshot());
 
@@ -448,6 +564,9 @@ browser.runtime.onMessage.addListener((msg, sender) => {
         totalBlocked: state.totalBlocked,
         networkFilters: SB.lists.compiledInfo.networkFilters,
         cosmeticFilters: SB.lists.compiledInfo.cosmeticFilters,
+        // Blocage immédiat en cours sur ce site : le popup doit proposer
+        // de le lever, pas d'en poser un second.
+        focusUntil: hostname === '' ? 0 : SB.focus.tempFor(hostname),
       });
     }
 
@@ -576,6 +695,8 @@ async function init() {
   state.totalBlocked = stored['stats:total'] || 0;
 
   await SB.stats.init();
+  await SB.focus.init();
+  await SB.controls.init();
   await SB.lists.compileAll();
   state.ready = true;
 

@@ -196,5 +196,155 @@
   },
   "review_later": {
     "message": "Hayır, teşekkürler"
+  },
+  "opt_focus": {
+    "message": "Odak modu"
+  },
+  "opt_focus_hint": {
+    "message": "Dikkatinizi dağıtan sitelere erişimi yavaşlatır. Uzantıyı kapatmak bunu atlar — bu bir bariyer, kilit değil."
+  },
+  "opt_focus_add": {
+    "message": "Kural ekle"
+  },
+  "opt_focus_none": {
+    "message": "Henüz kural yok. Bir siteyi belirli saatlerde erişilemez kılmak için bir kural ekleyin."
+  },
+  "opt_focus_name": {
+    "message": "Ad"
+  },
+  "opt_focus_sites": {
+    "message": "Siteler"
+  },
+  "opt_focus_sites_hint": {
+    "message": "Her satıra bir tane. Alt alan adları dahildir."
+  },
+  "opt_focus_when": {
+    "message": "Ne zaman"
+  },
+  "opt_focus_from": {
+    "message": "başlangıç"
+  },
+  "opt_focus_to": {
+    "message": "bitiş"
+  },
+  "opt_focus_delete": {
+    "message": "Sil"
+  },
+  "opt_focus_preset_work": {
+    "message": "Mesai saatleri"
+  },
+  "opt_focus_preset_evening": {
+    "message": "Akşam"
+  },
+  "opt_focus_preset_all": {
+    "message": "Her zaman"
+  },
+  "focus_blocked": {
+    "message": "Erişilemiyor"
+  },
+  "focus_until": {
+    "message": "$1 itibarıyla yeniden kullanılabilir"
+  },
+  "focus_back": {
+    "message": "Geri dön"
+  },
+  "opt_controls": {
+    "message": "Site denetimleri"
+  },
+  "ctl_rightclick": {
+    "message": "Sağ tıklamayı serbest bırak"
+  },
+  "ctl_selection": {
+    "message": "Seçme ve kopyalamayı serbest bırak"
+  },
+  "ctl_popups": {
+    "message": "Açılır pencereleri engelle"
+  },
+  "ctl_webrtc": {
+    "message": "WebRTC’yi engelle (IP sızıntısı)"
+  },
+  "ctl_cookies": {
+    "message": "Bu sitenin çerezlerini sil"
+  },
+  "opt_focus_limit": {
+    "message": "Süre sınırı"
+  },
+  "opt_focus_limit_hint": {
+    "message": "Zaman aralığında izin verilen dakika. 0 tüm süre boyunca engeller."
+  },
+  "focus_block_now": {
+    "message": "Bu siteyi şimdi engelle"
+  },
+  "focus_blocked_until": {
+    "message": "$1 saatine kadar engelli"
+  },
+  "focus_unblock": {
+    "message": "Engeli kaldır"
+  },
+  "focus_lockdown": {
+    "message": "Her şeyi engelle"
+  },
+  "focus_lockdown_hint": {
+    "message": "Zamanlamalarından bağımsız olarak tüm kuralları bir anda askıya alır."
+  },
+  "focus_locked_until": {
+    "message": "$1 saatine kadar her şey engelli"
+  },
+  "focus_lift": {
+    "message": "Kaldır"
+  },
+  "focus_rules": {
+    "message": "Kurallar"
+  },
+  "focus_subdomains": {
+    "message": "Alt alan adlarını dahil et"
+  },
+  "focus_sites_hint": {
+    "message": "Her satıra bir tane. youtube.com/shorts bir yolu, +kelime bir anahtar kelimeyi hedefler."
+  },
+  "focus_ranges": {
+    "message": "Zaman aralıkları"
+  },
+  "focus_add_range": {
+    "message": "Aralık ekle"
+  },
+  "focus_delay": {
+    "message": "Erişimden önce bekleme (saniye)"
+  },
+  "focus_redirect": {
+    "message": "Şuraya yönlendir"
+  },
+  "focus_backup": {
+    "message": "Yedek"
+  },
+  "focus_backup_hint": {
+    "message": "Kurallarınızı dışa aktarın veya bir yedeği yapıştırıp içe aktarın. İçe aktarma her şeyi değiştirir."
+  },
+  "focus_export": {
+    "message": "Dışa aktar"
+  },
+  "focus_import": {
+    "message": "İçe aktar"
+  },
+  "focus_used": {
+    "message": "$1 kullanıldı · $2 kaldı"
+  },
+  "focus_open": {
+    "message": "Odak modunu aç"
+  },
+  "focus_continue": {
+    "message": "Devam et"
+  },
+  "focus_wait": {
+    "message": "$1 sn sonra kullanılabilir"
+  },
+  "focus_profiles": {
+    "message": "Profiller"
+  },
+  "focus_group": {
+    "message": "Profil"
+  },
+  "focus_group_hint": {
+    "message": "İsteğe bağlı. Aynı adı taşıyan kurallar açılır pencereden birlikte etkinleştirilir."
   }
 }

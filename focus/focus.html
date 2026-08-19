@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SandBlock</title>
+  <!-- On réutilise la feuille des réglages plutôt que d'en dupliquer une :
+       tokens, cartes, interrupteurs et boutons y sont déjà définis. -->
+  <link rel="stylesheet" href="../options/options.css">
+  <link rel="stylesheet" href="focus.css">
+</head>
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <svg class="logo" viewBox="0 0 96 96" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#22d3ee"/>
+            <stop offset="1" stop-color="#818cf8"/>
+          </linearGradient>
+        </defs>
+        <path d="M48 4 L86 18 V46 C86 68 70 84 48 92 C26 84 10 68 10 46 V18 Z"
+              fill="none" stroke="url(#lg)" stroke-width="7" stroke-linejoin="round"/>
+        <circle cx="48" cy="48" r="17" fill="none" stroke="url(#lg)" stroke-width="7"/>
+        <line x1="36" y1="60" x2="60" y2="36" stroke="url(#lg)" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1 data-i18n="opt_focus"></h1>
+        <p data-i18n="opt_focus_hint"></p>
+      </div>
+    </header>
+
+    <!-- Une seule application, deux documents. La navigation se fait dans
+         le MÊME onglet : ouvrir un second onglet pour le mode concentration
+         donnait l impression de deux produits séparés. -->
+    <nav class="tabs">
+      <a class="tab" href="../options/options.html" data-i18n="settings"></a>
+      <a class="tab on" href="../focus/focus.html" data-i18n="opt_focus"></a>
+    </nav>
+
+    <!-- Verrou global : l'équivalent du « lockdown » de LeechBlock. Il
+         suspend toutes les règles d'un coup, sans toucher à leur horaire. -->
+    <section class="card">
+      <div class="card-head">
+        <h2 data-i18n="focus_lockdown"></h2>
+        <button class="btn ghost" id="lockLift" data-i18n="focus_lift" hidden></button>
+      </div>
+      <p class="row-hint" data-i18n="focus_lockdown_hint"></p>
+      <div class="lock-row" id="lockRow"></div>
+      <p class="lock-state" id="lockState" hidden></p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2 data-i18n="focus_rules"></h2>
+        <button class="btn" id="ruleAdd" data-i18n="opt_focus_add"></button>
+      </div>
+      <div id="ruleList"></div>
+      <p class="dash-empty" id="ruleEmpty" data-i18n="opt_focus_none" hidden></p>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="focus_backup"></h2>
+      <p class="row-hint" data-i18n="focus_backup_hint"></p>
+      <textarea id="backupText" spellcheck="false" rows="6"></textarea>
+      <div class="actions">
+        <button class="btn" id="exportBtn" data-i18n="focus_export"></button>
+        <button class="btn primary" id="importBtn" data-i18n="focus_import"></button>
+        <span class="save-note" id="backupNote"></span>
+      </div>
+    </section>
+
+    <footer class="about">
+      <span data-i18n="opt_about"></span>
+      <span id="version"></span>
+    </footer>
+
+  </div>
+  <script src="../js/ui/i18n.js"></script>
+  <script src="focus.js"></script>
+</body>
+</html>

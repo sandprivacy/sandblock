@@ -196,5 +196,155 @@
   },
   "review_later": {
     "message": "Nee, bedankt"
+  },
+  "opt_focus": {
+    "message": "Focusmodus"
+  },
+  "opt_focus_hint": {
+    "message": "Vertraagt de toegang tot sites die je afleiden. De extensie uitschakelen omzeilt dit — het is een vangrail, geen slot."
+  },
+  "opt_focus_add": {
+    "message": "Regel toevoegen"
+  },
+  "opt_focus_none": {
+    "message": "Nog geen regels. Voeg er een toe om een site op bepaalde uren buiten bereik te houden."
+  },
+  "opt_focus_name": {
+    "message": "Naam"
+  },
+  "opt_focus_sites": {
+    "message": "Sites"
+  },
+  "opt_focus_sites_hint": {
+    "message": "Eén per regel. Subdomeinen inbegrepen."
+  },
+  "opt_focus_when": {
+    "message": "Wanneer"
+  },
+  "opt_focus_from": {
+    "message": "van"
+  },
+  "opt_focus_to": {
+    "message": "tot"
+  },
+  "opt_focus_delete": {
+    "message": "Verwijderen"
+  },
+  "opt_focus_preset_work": {
+    "message": "Kantooruren"
+  },
+  "opt_focus_preset_evening": {
+    "message": "Avond"
+  },
+  "opt_focus_preset_all": {
+    "message": "Altijd"
+  },
+  "focus_blocked": {
+    "message": "Buiten bereik"
+  },
+  "focus_until": {
+    "message": "Weer beschikbaar om $1"
+  },
+  "focus_back": {
+    "message": "Terug"
+  },
+  "opt_controls": {
+    "message": "Sitebediening"
+  },
+  "ctl_rightclick": {
+    "message": "Rechtsklikken deblokkeren"
+  },
+  "ctl_selection": {
+    "message": "Selecteren en kopiëren deblokkeren"
+  },
+  "ctl_popups": {
+    "message": "Pop-upvensters blokkeren"
+  },
+  "ctl_webrtc": {
+    "message": "WebRTC blokkeren (IP-lek)"
+  },
+  "ctl_cookies": {
+    "message": "Cookies van deze site wissen"
+  },
+  "opt_focus_limit": {
+    "message": "Tijdslimiet"
+  },
+  "opt_focus_limit_hint": {
+    "message": "Toegestane minuten binnen het tijdvak. 0 blokkeert de hele tijd."
+  },
+  "focus_block_now": {
+    "message": "Deze site nu blokkeren"
+  },
+  "focus_blocked_until": {
+    "message": "Geblokkeerd tot $1"
+  },
+  "focus_unblock": {
+    "message": "Deblokkeren"
+  },
+  "focus_lockdown": {
+    "message": "Alles blokkeren"
+  },
+  "focus_lockdown_hint": {
+    "message": "Schort alle regels tegelijk op, ongeacht hun tijdvak."
+  },
+  "focus_locked_until": {
+    "message": "Alles geblokkeerd tot $1"
+  },
+  "focus_lift": {
+    "message": "Opheffen"
+  },
+  "focus_rules": {
+    "message": "Regels"
+  },
+  "focus_subdomains": {
+    "message": "Subdomeinen meenemen"
+  },
+  "focus_sites_hint": {
+    "message": "Eén per regel. youtube.com/shorts richt op een pad; +woord op een trefwoord."
+  },
+  "focus_ranges": {
+    "message": "Tijdvakken"
+  },
+  "focus_add_range": {
+    "message": "Tijdvak toevoegen"
+  },
+  "focus_delay": {
+    "message": "Wachten voor toegang (seconden)"
+  },
+  "focus_redirect": {
+    "message": "Doorsturen naar"
+  },
+  "focus_backup": {
+    "message": "Back-up"
+  },
+  "focus_backup_hint": {
+    "message": "Exporteer je regels, of plak een back-up en importeer. Importeren vervangt alles."
+  },
+  "focus_export": {
+    "message": "Exporteren"
+  },
+  "focus_import": {
+    "message": "Importeren"
+  },
+  "focus_used": {
+    "message": "$1 gebruikt · $2 over"
+  },
+  "focus_open": {
+    "message": "Focusmodus openen"
+  },
+  "focus_continue": {
+    "message": "Doorgaan"
+  },
+  "focus_wait": {
+    "message": "Beschikbaar over $1 s"
+  },
+  "focus_profiles": {
+    "message": "Profielen"
+  },
+  "focus_group": {
+    "message": "Profiel"
+  },
+  "focus_group_hint": {
+    "message": "Optioneel. Regels met dezelfde naam schakel je samen in vanuit de popup."
   }
 }

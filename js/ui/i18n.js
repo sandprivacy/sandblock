@@ -48,12 +48,28 @@ async function set(lang) {
   return choice;
 }
 
-function msg(key) {
+/**
+ * @param {string} key
+ * @param {string|string[]} [subs] valeurs pour les repères $1, $2…
+ *
+ * Les substitutions comptent pour la qualité des traductions : l'ordre
+ * des mots autour d'une valeur change d'une langue à l'autre, et
+ * découper la phrase en deux éléments HTML fige cet ordre.
+ */
+function msg(key, subs) {
+  const args = subs === undefined ? [] : (Array.isArray(subs) ? subs : [subs]);
   if (table !== null) {
     const entry = table[key];
-    if (entry && typeof entry.message === 'string') return entry.message;
+    if (entry && typeof entry.message === 'string') {
+      return args.length === 0
+        ? entry.message
+        : entry.message.replace(/\$(\d)/g, (m, i) => {
+          const v = args[Number(i) - 1];
+          return v === undefined ? m : v;
+        });
+    }
   }
-  return browser.i18n.getMessage(key);
+  return browser.i18n.getMessage(key, args);
 }
 
 /** Étiquette de langue pour Intl (formats de nombre et de date). */

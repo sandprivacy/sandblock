@@ -196,5 +196,155 @@
   },
   "review_later": {
     "message": "لا، شكرًا"
+  },
+  "opt_focus": {
+    "message": "وضع التركيز"
+  },
+  "opt_focus_hint": {
+    "message": "يبطّئ الوصول إلى المواقع التي تشتّت انتباهك. تعطيل الإضافة يتجاوزه — إنه حاجز إرشادي، وليس قفلاً."
+  },
+  "opt_focus_add": {
+    "message": "إضافة قاعدة"
+  },
+  "opt_focus_none": {
+    "message": "لا توجد قواعد بعد. أضف واحدة لإبقاء موقع بعيدًا عن المتناول في ساعات محددة."
+  },
+  "opt_focus_name": {
+    "message": "الاسم"
+  },
+  "opt_focus_sites": {
+    "message": "المواقع"
+  },
+  "opt_focus_sites_hint": {
+    "message": "واحد في كل سطر. النطاقات الفرعية مشمولة."
+  },
+  "opt_focus_when": {
+    "message": "متى"
+  },
+  "opt_focus_from": {
+    "message": "من"
+  },
+  "opt_focus_to": {
+    "message": "إلى"
+  },
+  "opt_focus_delete": {
+    "message": "حذف"
+  },
+  "opt_focus_preset_work": {
+    "message": "ساعات العمل"
+  },
+  "opt_focus_preset_evening": {
+    "message": "المساء"
+  },
+  "opt_focus_preset_all": {
+    "message": "دائمًا"
+  },
+  "focus_blocked": {
+    "message": "بعيد عن المتناول"
+  },
+  "focus_until": {
+    "message": "متاح مجددًا في $1"
+  },
+  "focus_back": {
+    "message": "رجوع"
+  },
+  "opt_controls": {
+    "message": "عناصر التحكم بالموقع"
+  },
+  "ctl_rightclick": {
+    "message": "إلغاء حظر النقر بالزر الأيمن"
+  },
+  "ctl_selection": {
+    "message": "إلغاء حظر التحديد والنسخ"
+  },
+  "ctl_popups": {
+    "message": "حظر النوافذ المنبثقة"
+  },
+  "ctl_webrtc": {
+    "message": "حظر WebRTC (تسريب IP)"
+  },
+  "ctl_cookies": {
+    "message": "حذف ملفات تعريف الارتباط لهذا الموقع"
+  },
+  "opt_focus_limit": {
+    "message": "حد زمني"
+  },
+  "opt_focus_limit_hint": {
+    "message": "الدقائق المسموح بها داخل الفترة. 0 يحظر طوال الوقت."
+  },
+  "focus_block_now": {
+    "message": "احظر هذا الموقع الآن"
+  },
+  "focus_blocked_until": {
+    "message": "محظور حتى $1"
+  },
+  "focus_unblock": {
+    "message": "إلغاء الحظر"
+  },
+  "focus_lockdown": {
+    "message": "احظر كل شيء"
+  },
+  "focus_lockdown_hint": {
+    "message": "يعلّق جميع القواعد دفعة واحدة، مهما كان جدولها."
+  },
+  "focus_locked_until": {
+    "message": "كل شيء محظور حتى $1"
+  },
+  "focus_lift": {
+    "message": "رفع الحظر"
+  },
+  "focus_rules": {
+    "message": "القواعد"
+  },
+  "focus_subdomains": {
+    "message": "تضمين النطاقات الفرعية"
+  },
+  "focus_sites_hint": {
+    "message": "واحد في كل سطر. youtube.com/shorts يستهدف مسارًا، و+كلمة يستهدف كلمة مفتاحية."
+  },
+  "focus_ranges": {
+    "message": "الفترات الزمنية"
+  },
+  "focus_add_range": {
+    "message": "إضافة فترة"
+  },
+  "focus_delay": {
+    "message": "الانتظار قبل الوصول (ثوانٍ)"
+  },
+  "focus_redirect": {
+    "message": "إعادة التوجيه إلى"
+  },
+  "focus_backup": {
+    "message": "نسخة احتياطية"
+  },
+  "focus_backup_hint": {
+    "message": "صدّر قواعدك، أو الصق نسخة واستوردها. الاستيراد يستبدل كل شيء."
+  },
+  "focus_export": {
+    "message": "تصدير"
+  },
+  "focus_import": {
+    "message": "استيراد"
+  },
+  "focus_used": {
+    "message": "استُخدم $1 · متبقٍ $2"
+  },
+  "focus_open": {
+    "message": "فتح وضع التركيز"
+  },
+  "focus_continue": {
+    "message": "متابعة"
+  },
+  "focus_wait": {
+    "message": "متاح خلال $1 ثانية"
+  },
+  "focus_profiles": {
+    "message": "الملفات"
+  },
+  "focus_group": {
+    "message": "الملف"
+  },
+  "focus_group_hint": {
+    "message": "اختياري. القواعد التي تحمل الاسم نفسه تُفعَّل معًا من النافذة المنبثقة."
   }
 }
