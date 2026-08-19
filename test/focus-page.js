@@ -49,6 +49,41 @@ const DELAYED = [{
   limitMins: 0, delaySecs: 3, enabled: true,
 }];
 
+/**
+ * Attend que l'URL courante contienne un fragment, plutôt que de dormir
+ * une durée arbitraire. C'est la différence entre un test qui passe et
+ * un test qui prouve quelque chose.
+ */
+async function waitForUrl(ff, fragment, timeout) {
+  const deadline = Date.now() + (timeout || 15000);
+  for (;;) {
+    let href = '';
+    try { href = await ff.script('return location.href;'); } catch (_) {}
+    if (typeof href === 'string' && href.indexOf(fragment) !== -1) return href;
+    if (Date.now() > deadline) return href;
+    await new Promise((r) => setTimeout(r, 300));
+  }
+}
+
+/**
+ * Attendre sur le NOM D HÔTE, pas sur l URL.
+ *
+ * L adresse de la page d interception porte l URL d origine en paramètre
+ * (o=https%3A%2F%2Fexample.com%2F) : chercher « example.com » dans
+ * location.href y correspond déjà, et la sonde rendait la main sans que
+ * rien ne se soit passé.
+ */
+async function waitForHost(ff, host, timeout) {
+  const deadline = Date.now() + (timeout || 15000);
+  for (;;) {
+    let h = '';
+    try { h = await ff.script('return location.hostname;'); } catch (_) {}
+    if (h === host) return h;
+    if (Date.now() > deadline) return h;
+    await new Promise((r) => setTimeout(r, 300));
+  }
+}
+
 (async () => {
   const ff = new Marionette();
   try {
@@ -154,10 +189,9 @@ const DELAYED = [{
     const contentTab = (await ff.windows())[0];
     await ff.switchTo(contentTab);
     await ff.navigate(SITE).catch(() => {});
-    await new Promise((r) => setTimeout(r, 3000));
-
+    const blockedHref = await waitForUrl(ff, '/focus/blocked.html', 15000);
     T('la navigation est détournée',
-      (await ff.script('return location.href;')).indexOf('/focus/blocked.html') !== -1, true);
+      blockedHref.indexOf('/focus/blocked.html') !== -1, true);
 
     const early = await ff.script(`return (function () {
       const b = document.getElementById('continue');
@@ -182,7 +216,7 @@ const DELAYED = [{
     T('et change d\'aspect', ready.classe, true);
 
     await ff.script(`document.getElementById('continue').click(); return 1;`);
-    await new Promise((r) => setTimeout(r, 3000));
+    await waitForHost(ff, 'example.com', 15000);
     T('l\'accès est accordé et le site s\'ouvre',
       await ff.script('return location.hostname;'), 'example.com');
 

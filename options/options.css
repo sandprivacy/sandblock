@@ -251,6 +251,15 @@ textarea:focus { border-color: rgba(34, 211, 238, 0.45); }
 }
 .select option:checked { color: var(--accent-1); font-weight: 700; }
 
+/* Le pied affirme « open source » : sans lien, cest une revendication
+   sans preuve — et ce public la lit comme telle. */
+.about .src {
+  color: var(--accent-1);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(34, 211, 238, 0.3);
+}
+.about .src:hover { border-bottom-color: var(--accent-1); }
+
 /* ---------- navigation ---------- */
 
 .tabs {
